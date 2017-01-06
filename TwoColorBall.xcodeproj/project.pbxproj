@@ -12,6 +12,7 @@
 		470CABE61E118A7100F4A206 /* SimpleWinning.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABE51E118A7100F4A206 /* SimpleWinning.m */; };
 		470CABE91E118B6300F4A206 /* StatisticsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABE81E118B6300F4A206 /* StatisticsManager.m */; };
 		470CABEC1E118D2500F4A206 /* HistorySameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABEB1E118D2500F4A206 /* HistorySameViewController.m */; };
+		4710F6EC1E1F6460004C3128 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4710F6EB1E1F6460004C3128 /* README.md */; };
 		471296021E13CA1400402038 /* WinningRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471296011E13CA1400402038 /* WinningRuleViewController.m */; };
 		4712C0311E0E568800271B08 /* winnings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4712C0301E0E568800271B08 /* winnings.plist */; };
 		471D3B8A1E0E970800ED730F /* WinningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471D3B891E0E970800ED730F /* WinningListViewController.m */; };
@@ -65,6 +66,7 @@
 		470CABE81E118B6300F4A206 /* StatisticsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsManager.m; sourceTree = "<group>"; };
 		470CABEA1E118D2500F4A206 /* HistorySameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistorySameViewController.h; sourceTree = "<group>"; };
 		470CABEB1E118D2500F4A206 /* HistorySameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistorySameViewController.m; sourceTree = "<group>"; };
+		4710F6EB1E1F6460004C3128 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		471296001E13CA1400402038 /* WinningRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningRuleViewController.h; sourceTree = "<group>"; };
 		471296011E13CA1400402038 /* WinningRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningRuleViewController.m; sourceTree = "<group>"; };
 		4712C0301E0E568800271B08 /* winnings.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = winnings.plist; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		478FFC0D1E0B067E004F5960 = {
 			isa = PBXGroup;
 			children = (
+				4710F6EB1E1F6460004C3128 /* README.md */,
 				478FFC181E0B067F004F5960 /* TwoColorBall */,
 				478FFC171E0B067F004F5960 /* Products */,
 				7DA0B88876595317AD6AD345 /* Pods */,
@@ -595,6 +598,7 @@
 				471DB7301E0BF0930065D426 /* Reachability.m in Sources */,
 				47E744EA1E1105EB0017E90D /* BallView.m in Sources */,
 				47F5E24F1E16E14D00205009 /* TrendTitleView.m in Sources */,
+				4710F6EC1E1F6460004C3128 /* README.md in Sources */,
 				471296021E13CA1400402038 /* WinningRuleViewController.m in Sources */,
 				470CABE91E118B6300F4A206 /* StatisticsManager.m in Sources */,
 				470CABDD1E115F9300F4A206 /* WinningBallView.m in Sources */,
