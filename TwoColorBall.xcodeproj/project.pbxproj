@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		470CABDD1E115F9300F4A206 /* WinningBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABDC1E115F9300F4A206 /* WinningBallView.m */; };
+		470CABE31E11894700F4A206 /* NumberCombinations.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABE21E11894700F4A206 /* NumberCombinations.m */; };
+		470CABE61E118A7100F4A206 /* SimpleWinning.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABE51E118A7100F4A206 /* SimpleWinning.m */; };
+		470CABE91E118B6300F4A206 /* StatisticsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABE81E118B6300F4A206 /* StatisticsManager.m */; };
+		470CABEC1E118D2500F4A206 /* HistorySameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABEB1E118D2500F4A206 /* HistorySameViewController.m */; };
+		471296021E13CA1400402038 /* WinningRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471296011E13CA1400402038 /* WinningRuleViewController.m */; };
+		4712C0311E0E568800271B08 /* winnings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4712C0301E0E568800271B08 /* winnings.plist */; };
+		471D3B8A1E0E970800ED730F /* WinningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471D3B891E0E970800ED730F /* WinningListViewController.m */; };
+		471DB7301E0BF0930065D426 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 471DB72F1E0BF0930065D426 /* Reachability.m */; };
+		471DB7341E0BF5E90065D426 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 471DB7331E0BF5E90065D426 /* DataManager.m */; };
+		471DB73B1E0BFB2B0065D426 /* Winning.m in Sources */ = {isa = PBXBuildFile; fileRef = 471DB73A1E0BFB2B0065D426 /* Winning.m */; };
+		471DB7401E0BFD480065D426 /* TFHppleElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 471DB73F1E0BFD480065D426 /* TFHppleElements.m */; };
+		47205E671E14A42E0036B4B0 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 47205E661E14A42E0036B4B0 /* Ball.m */; };
+		47205E6A1E14A4770036B4B0 /* TrendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 47205E691E14A4770036B4B0 /* TrendData.m */; };
+		4729C0C11E0B317A00A6FF3F /* FunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4729C0C01E0B317A00A6FF3F /* FunctionCell.m */; };
+		473056F61E174E4C007776AE /* TrendStatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 473056F51E174E4C007776AE /* TrendStatisticsView.m */; };
+		473BE6FF1E17687500A09915 /* TrendBallButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 473BE6FE1E17687500A09915 /* TrendBallButtonView.m */; };
+		473BE7021E1769F200A09915 /* BallButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 473BE7011E1769F200A09915 /* BallButtonView.m */; };
+		4742E96B1E0D56DA008C4115 /* CommonMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4742E96A1E0D56DA008C4115 /* CommonMethod.m */; };
+		4742E96E1E0D6978008C4115 /* WinningList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4742E96D1E0D6978008C4115 /* WinningList.m */; };
+		4742E9711E0D6F7D008C4115 /* AFTCBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4742E9701E0D6F7D008C4115 /* AFTCBClient.m */; };
+		4749D3531E15557200F52719 /* TrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749D3521E15557200F52719 /* TrendViewController.m */; };
+		475A39F51E13926C00DC48AC /* WinningDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475A39F41E13926C00DC48AC /* WinningDetailViewController.m */; };
+		477F42AE1E0EA7D300007990 /* WinningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477F42AD1E0EA7D300007990 /* WinningCell.m */; };
+		478FFC1B1E0B067F004F5960 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 478FFC1A1E0B067F004F5960 /* main.m */; };
+		478FFC1E1E0B067F004F5960 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 478FFC1D1E0B067F004F5960 /* AppDelegate.m */; };
+		478FFC211E0B067F004F5960 /* FunctionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478FFC201E0B067F004F5960 /* FunctionListViewController.m */; };
+		478FFC241E0B067F004F5960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478FFC221E0B067F004F5960 /* Main.storyboard */; };
+		478FFC261E0B067F004F5960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478FFC251E0B067F004F5960 /* Assets.xcassets */; };
+		478FFC291E0B067F004F5960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478FFC271E0B067F004F5960 /* LaunchScreen.storyboard */; };
+		47941A5E1E13AB85006DE196 /* MoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47941A5D1E13AB85006DE196 /* MoneyCell.m */; };
+		47941A611E13B02C006DE196 /* PrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47941A601E13B02C006DE196 /* PrizeCell.m */; };
+		47AF3F101E140A3B00AF4678 /* RuleCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AF3F0F1E140A3B00AF4678 /* RuleCell2.m */; };
+		47AF3F131E140EBA00AF4678 /* RuleCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AF3F121E140EBA00AF4678 /* RuleCell3.m */; };
+		47C0D5571E0B1F2600C59279 /* TrendNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C0D5561E0B1F2600C59279 /* TrendNavigationController.m */; };
+		47D86AE81E12375C00668F96 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D86AE71E12375C00668F96 /* StatisticsViewController.m */; };
+		47D86AEB1E12380B00668F96 /* StatisticsCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D86AEA1E12380B00668F96 /* StatisticsCollectionReusableView.m */; };
+		47D9587D1E16142600A1D318 /* TrendBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D9587C1E16142600A1D318 /* TrendBaseView.m */; };
+		47E744EA1E1105EB0017E90D /* BallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E744E91E1105EB0017E90D /* BallView.m */; };
+		47F375C21E1505BE00ED6E5D /* TrendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F375C11E1505BE00ED6E5D /* TrendCell.m */; };
+		47F5E24F1E16E14D00205009 /* TrendTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F5E24E1E16E14D00205009 /* TrendTitleView.m */; };
+		47F5E2521E16E1FC00205009 /* TrendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F5E2511E16E1FC00205009 /* TrendView.m */; };
+		47F628D11E13FA53003DDD1C /* RuleCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F628D01E13FA53003DDD1C /* RuleCell1.m */; };
+		8FEF615BFEBEDC5C8018BDAA /* libPods-TwoColorBall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EAE093A1879DD72773DDCF /* libPods-TwoColorBall.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3EDED855C819AF50B84F9923 /* Pods-TwoColorBall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoColorBall.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwoColorBall/Pods-TwoColorBall.release.xcconfig"; sourceTree = "<group>"; };
+		470CABDB1E115F9300F4A206 /* WinningBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningBallView.h; sourceTree = "<group>"; };
+		470CABDC1E115F9300F4A206 /* WinningBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningBallView.m; sourceTree = "<group>"; };
+		470CABE11E11894700F4A206 /* NumberCombinations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberCombinations.h; sourceTree = "<group>"; };
+		470CABE21E11894700F4A206 /* NumberCombinations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberCombinations.m; sourceTree = "<group>"; };
+		470CABE41E118A7100F4A206 /* SimpleWinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWinning.h; sourceTree = "<group>"; };
+		470CABE51E118A7100F4A206 /* SimpleWinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleWinning.m; sourceTree = "<group>"; };
+		470CABE71E118B6300F4A206 /* StatisticsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsManager.h; sourceTree = "<group>"; };
+		470CABE81E118B6300F4A206 /* StatisticsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsManager.m; sourceTree = "<group>"; };
+		470CABEA1E118D2500F4A206 /* HistorySameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistorySameViewController.h; sourceTree = "<group>"; };
+		470CABEB1E118D2500F4A206 /* HistorySameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistorySameViewController.m; sourceTree = "<group>"; };
+		471296001E13CA1400402038 /* WinningRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningRuleViewController.h; sourceTree = "<group>"; };
+		471296011E13CA1400402038 /* WinningRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningRuleViewController.m; sourceTree = "<group>"; };
+		4712C0301E0E568800271B08 /* winnings.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = winnings.plist; sourceTree = "<group>"; };
+		471D3B881E0E970700ED730F /* WinningListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningListViewController.h; sourceTree = "<group>"; };
+		471D3B891E0E970800ED730F /* WinningListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningListViewController.m; sourceTree = "<group>"; };
+		471DB72E1E0BF0930065D426 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		471DB72F1E0BF0930065D426 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		471DB7321E0BF5E90065D426 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		471DB7331E0BF5E90065D426 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		471DB7391E0BFB2B0065D426 /* Winning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Winning.h; sourceTree = "<group>"; };
+		471DB73A1E0BFB2B0065D426 /* Winning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Winning.m; sourceTree = "<group>"; };
+		471DB73E1E0BFD480065D426 /* TFHppleElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElements.h; sourceTree = "<group>"; };
+		471DB73F1E0BFD480065D426 /* TFHppleElements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElements.m; sourceTree = "<group>"; };
+		47205E651E14A42E0036B4B0 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		47205E661E14A42E0036B4B0 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		47205E681E14A4770036B4B0 /* TrendData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendData.h; sourceTree = "<group>"; };
+		47205E691E14A4770036B4B0 /* TrendData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendData.m; sourceTree = "<group>"; };
+		4729C0BF1E0B317A00A6FF3F /* FunctionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionCell.h; sourceTree = "<group>"; };
+		4729C0C01E0B317A00A6FF3F /* FunctionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionCell.m; sourceTree = "<group>"; };
+		4729C0C31E0B329200A6FF3F /* PublicClassPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicClassPrefixHeader.pch; sourceTree = "<group>"; };
+		473056F41E174E4C007776AE /* TrendStatisticsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendStatisticsView.h; sourceTree = "<group>"; };
+		473056F51E174E4C007776AE /* TrendStatisticsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendStatisticsView.m; sourceTree = "<group>"; };
+		473BE6FD1E17687500A09915 /* TrendBallButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendBallButtonView.h; sourceTree = "<group>"; };
+		473BE6FE1E17687500A09915 /* TrendBallButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendBallButtonView.m; sourceTree = "<group>"; };
+		473BE7001E1769F200A09915 /* BallButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallButtonView.h; sourceTree = "<group>"; };
+		473BE7011E1769F200A09915 /* BallButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallButtonView.m; sourceTree = "<group>"; };
+		4742E9691E0D56DA008C4115 /* CommonMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMethod.h; sourceTree = "<group>"; };
+		4742E96A1E0D56DA008C4115 /* CommonMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonMethod.m; sourceTree = "<group>"; };
+		4742E96C1E0D6978008C4115 /* WinningList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningList.h; sourceTree = "<group>"; };
+		4742E96D1E0D6978008C4115 /* WinningList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningList.m; sourceTree = "<group>"; };
+		4742E96F1E0D6F7D008C4115 /* AFTCBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTCBClient.h; sourceTree = "<group>"; };
+		4742E9701E0D6F7D008C4115 /* AFTCBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTCBClient.m; sourceTree = "<group>"; };
+		4749D3511E15557200F52719 /* TrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendViewController.h; sourceTree = "<group>"; };
+		4749D3521E15557200F52719 /* TrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendViewController.m; sourceTree = "<group>"; };
+		475A39F31E13926C00DC48AC /* WinningDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningDetailViewController.h; sourceTree = "<group>"; };
+		475A39F41E13926C00DC48AC /* WinningDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningDetailViewController.m; sourceTree = "<group>"; };
+		477F42AC1E0EA7D300007990 /* WinningCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningCell.h; sourceTree = "<group>"; };
+		477F42AD1E0EA7D300007990 /* WinningCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningCell.m; sourceTree = "<group>"; };
+		478FFC161E0B067F004F5960 /* TwoColorBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoColorBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		478FFC1A1E0B067F004F5960 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		478FFC1C1E0B067F004F5960 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		478FFC1D1E0B067F004F5960 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		478FFC1F1E0B067F004F5960 /* FunctionListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionListViewController.h; sourceTree = "<group>"; };
+		478FFC201E0B067F004F5960 /* FunctionListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionListViewController.m; sourceTree = "<group>"; };
+		478FFC231E0B067F004F5960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		478FFC251E0B067F004F5960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		478FFC281E0B067F004F5960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		478FFC2A1E0B067F004F5960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47941A5C1E13AB85006DE196 /* MoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyCell.h; sourceTree = "<group>"; };
+		47941A5D1E13AB85006DE196 /* MoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyCell.m; sourceTree = "<group>"; };
+		47941A5F1E13B02C006DE196 /* PrizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeCell.h; sourceTree = "<group>"; };
+		47941A601E13B02C006DE196 /* PrizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeCell.m; sourceTree = "<group>"; };
+		47AF3F0E1E140A3B00AF4678 /* RuleCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleCell2.h; sourceTree = "<group>"; };
+		47AF3F0F1E140A3B00AF4678 /* RuleCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleCell2.m; sourceTree = "<group>"; };
+		47AF3F111E140EBA00AF4678 /* RuleCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleCell3.h; sourceTree = "<group>"; };
+		47AF3F121E140EBA00AF4678 /* RuleCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleCell3.m; sourceTree = "<group>"; };
+		47C0D5551E0B1F2600C59279 /* TrendNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendNavigationController.h; sourceTree = "<group>"; };
+		47C0D5561E0B1F2600C59279 /* TrendNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendNavigationController.m; sourceTree = "<group>"; };
+		47D86AE61E12375C00668F96 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		47D86AE71E12375C00668F96 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		47D86AE91E12380B00668F96 /* StatisticsCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsCollectionReusableView.h; sourceTree = "<group>"; };
+		47D86AEA1E12380B00668F96 /* StatisticsCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsCollectionReusableView.m; sourceTree = "<group>"; };
+		47D9587B1E16142600A1D318 /* TrendBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendBaseView.h; sourceTree = "<group>"; };
+		47D9587C1E16142600A1D318 /* TrendBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendBaseView.m; sourceTree = "<group>"; };
+		47E744E81E1105EB0017E90D /* BallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallView.h; sourceTree = "<group>"; };
+		47E744E91E1105EB0017E90D /* BallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallView.m; sourceTree = "<group>"; };
+		47F375C01E1505BE00ED6E5D /* TrendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendCell.h; sourceTree = "<group>"; };
+		47F375C11E1505BE00ED6E5D /* TrendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendCell.m; sourceTree = "<group>"; };
+		47F5E24D1E16E14D00205009 /* TrendTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendTitleView.h; sourceTree = "<group>"; };
+		47F5E24E1E16E14D00205009 /* TrendTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendTitleView.m; sourceTree = "<group>"; };
+		47F5E2501E16E1FC00205009 /* TrendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendView.h; sourceTree = "<group>"; };
+		47F5E2511E16E1FC00205009 /* TrendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendView.m; sourceTree = "<group>"; };
+		47F628CF1E13FA53003DDD1C /* RuleCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleCell1.h; sourceTree = "<group>"; };
+		47F628D01E13FA53003DDD1C /* RuleCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleCell1.m; sourceTree = "<group>"; };
+		B5DF3476828E97C659D1E8B7 /* Pods-TwoColorBall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoColorBall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoColorBall/Pods-TwoColorBall.debug.xcconfig"; sourceTree = "<group>"; };
+		B5EAE093A1879DD72773DDCF /* libPods-TwoColorBall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwoColorBall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		478FFC131E0B067E004F5960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FEF615BFEBEDC5C8018BDAA /* libPods-TwoColorBall.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FFF3EA0B156890457211448 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5EAE093A1879DD72773DDCF /* libPods-TwoColorBall.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		470CABDE1E11656100F4A206 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				47E744E81E1105EB0017E90D /* BallView.h */,
+				47E744E91E1105EB0017E90D /* BallView.m */,
+				470CABDB1E115F9300F4A206 /* WinningBallView.h */,
+				470CABDC1E115F9300F4A206 /* WinningBallView.m */,
+				473BE7001E1769F200A09915 /* BallButtonView.h */,
+				473BE7011E1769F200A09915 /* BallButtonView.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		470CABDF1E11657700F4A206 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				47D86AE91E12380B00668F96 /* StatisticsCollectionReusableView.h */,
+				47D86AEA1E12380B00668F96 /* StatisticsCollectionReusableView.m */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		470CABE01E11891C00F4A206 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				470CABE71E118B6300F4A206 /* StatisticsManager.h */,
+				470CABE81E118B6300F4A206 /* StatisticsManager.m */,
+				470CABE11E11894700F4A206 /* NumberCombinations.h */,
+				470CABE21E11894700F4A206 /* NumberCombinations.m */,
+				470CABE41E118A7100F4A206 /* SimpleWinning.h */,
+				470CABE51E118A7100F4A206 /* SimpleWinning.m */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		471DB72D1E0BF0620065D426 /* Networking Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4742E96F1E0D6F7D008C4115 /* AFTCBClient.h */,
+				4742E9701E0D6F7D008C4115 /* AFTCBClient.m */,
+				471DB72E1E0BF0930065D426 /* Reachability.h */,
+				471DB72F1E0BF0930065D426 /* Reachability.m */,
+			);
+			name = "Networking Extensions";
+			sourceTree = "<group>";
+		};
+		471DB7311E0BF5910065D426 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				47205E641E14A4020036B4B0 /* Trend */,
+				470CABE01E11891C00F4A206 /* Statistics */,
+				4725956C1E0C1B8F004B46C3 /* DataManager */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		471DB73D1E0BFD130065D426 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4749D3501E15543500F52719 /* Trend */,
+				475A39F21E13924700DC48AC /* Winning */,
+				47AF3F151E14151C00AF4678 /* Statistics */,
+				47AF3F141E14150D00AF4678 /* HistorySame */,
+				478FFC1F1E0B067F004F5960 /* FunctionListViewController.h */,
+				478FFC201E0B067F004F5960 /* FunctionListViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		471DB7411E0BFDA10065D426 /* Hpple Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				471DB73E1E0BFD480065D426 /* TFHppleElements.h */,
+				471DB73F1E0BFD480065D426 /* TFHppleElements.m */,
+			);
+			name = "Hpple Extensions";
+			sourceTree = "<group>";
+		};
+		47205E641E14A4020036B4B0 /* Trend */ = {
+			isa = PBXGroup;
+			children = (
+				47205E681E14A4770036B4B0 /* TrendData.h */,
+				47205E691E14A4770036B4B0 /* TrendData.m */,
+				47205E651E14A42E0036B4B0 /* Ball.h */,
+				47205E661E14A42E0036B4B0 /* Ball.m */,
+			);
+			name = Trend;
+			sourceTree = "<group>";
+		};
+		4725956C1E0C1B8F004B46C3 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				471DB7321E0BF5E90065D426 /* DataManager.h */,
+				471DB7331E0BF5E90065D426 /* DataManager.m */,
+				471DB7391E0BFB2B0065D426 /* Winning.h */,
+				471DB73A1E0BFB2B0065D426 /* Winning.m */,
+				4742E96C1E0D6978008C4115 /* WinningList.h */,
+				4742E96D1E0D6978008C4115 /* WinningList.m */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		4729C0BC1E0B312100A6FF3F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				471DB7411E0BFDA10065D426 /* Hpple Extensions */,
+				4729C0C21E0B324B00A6FF3F /* Common Extensions */,
+				471DB72D1E0BF0620065D426 /* Networking Extensions */,
+				471DB73D1E0BFD130065D426 /* Controllers */,
+				471DB7311E0BF5910065D426 /* Models */,
+				4729C0BD1E0B312A00A6FF3F /* Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4729C0BD1E0B312A00A6FF3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47F375BC1E15045E00ED6E5D /* Trend */,
+				47EC4FE71E125B1F00CA2841 /* Winning */,
+				470CABDF1E11657700F4A206 /* Statistics */,
+				470CABDE1E11656100F4A206 /* Base */,
+				4729C0BE1E0B314B00A6FF3F /* Function */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4729C0BE1E0B314B00A6FF3F /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				4729C0BF1E0B317A00A6FF3F /* FunctionCell.h */,
+				4729C0C01E0B317A00A6FF3F /* FunctionCell.m */,
+			);
+			name = Function;
+			sourceTree = "<group>";
+		};
+		4729C0C21E0B324B00A6FF3F /* Common Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4729C0C31E0B329200A6FF3F /* PublicClassPrefixHeader.pch */,
+				4742E9691E0D56DA008C4115 /* CommonMethod.h */,
+				4742E96A1E0D56DA008C4115 /* CommonMethod.m */,
+			);
+			name = "Common Extensions";
+			sourceTree = "<group>";
+		};
+		4749D3501E15543500F52719 /* Trend */ = {
+			isa = PBXGroup;
+			children = (
+				4749D3511E15557200F52719 /* TrendViewController.h */,
+				4749D3521E15557200F52719 /* TrendViewController.m */,
+				47C0D5551E0B1F2600C59279 /* TrendNavigationController.h */,
+				47C0D5561E0B1F2600C59279 /* TrendNavigationController.m */,
+			);
+			name = Trend;
+			sourceTree = "<group>";
+		};
+		475A39F21E13924700DC48AC /* Winning */ = {
+			isa = PBXGroup;
+			children = (
+				471D3B881E0E970700ED730F /* WinningListViewController.h */,
+				471D3B891E0E970800ED730F /* WinningListViewController.m */,
+				475A39F31E13926C00DC48AC /* WinningDetailViewController.h */,
+				475A39F41E13926C00DC48AC /* WinningDetailViewController.m */,
+				471296001E13CA1400402038 /* WinningRuleViewController.h */,
+				471296011E13CA1400402038 /* WinningRuleViewController.m */,
+			);
+			name = Winning;
+			sourceTree = "<group>";
+		};
+		478FFC0D1E0B067E004F5960 = {
+			isa = PBXGroup;
+			children = (
+				478FFC181E0B067F004F5960 /* TwoColorBall */,
+				478FFC171E0B067F004F5960 /* Products */,
+				7DA0B88876595317AD6AD345 /* Pods */,
+				1FFF3EA0B156890457211448 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		478FFC171E0B067F004F5960 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				478FFC161E0B067F004F5960 /* TwoColorBall.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		478FFC181E0B067F004F5960 /* TwoColorBall */ = {
+			isa = PBXGroup;
+			children = (
+				478FFC301E0B0719004F5960 /* Resources */,
+				4729C0BC1E0B312100A6FF3F /* Classes */,
+				478FFC1C1E0B067F004F5960 /* AppDelegate.h */,
+				478FFC1D1E0B067F004F5960 /* AppDelegate.m */,
+				478FFC251E0B067F004F5960 /* Assets.xcassets */,
+				478FFC191E0B067F004F5960 /* Supporting Files */,
+			);
+			path = TwoColorBall;
+			sourceTree = "<group>";
+		};
+		478FFC191E0B067F004F5960 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				478FFC221E0B067F004F5960 /* Main.storyboard */,
+				478FFC271E0B067F004F5960 /* LaunchScreen.storyboard */,
+				478FFC1A1E0B067F004F5960 /* main.m */,
+				478FFC2A1E0B067F004F5960 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		478FFC301E0B0719004F5960 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4712C0301E0E568800271B08 /* winnings.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		47AF3F141E14150D00AF4678 /* HistorySame */ = {
+			isa = PBXGroup;
+			children = (
+				470CABEA1E118D2500F4A206 /* HistorySameViewController.h */,
+				470CABEB1E118D2500F4A206 /* HistorySameViewController.m */,
+			);
+			name = HistorySame;
+			sourceTree = "<group>";
+		};
+		47AF3F151E14151C00AF4678 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				47D86AE61E12375C00668F96 /* StatisticsViewController.h */,
+				47D86AE71E12375C00668F96 /* StatisticsViewController.m */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		47EC4FE71E125B1F00CA2841 /* Winning */ = {
+			isa = PBXGroup;
+			children = (
+				477F42AC1E0EA7D300007990 /* WinningCell.h */,
+				477F42AD1E0EA7D300007990 /* WinningCell.m */,
+				47941A5C1E13AB85006DE196 /* MoneyCell.h */,
+				47941A5D1E13AB85006DE196 /* MoneyCell.m */,
+				47941A5F1E13B02C006DE196 /* PrizeCell.h */,
+				47941A601E13B02C006DE196 /* PrizeCell.m */,
+				47F628CF1E13FA53003DDD1C /* RuleCell1.h */,
+				47F628D01E13FA53003DDD1C /* RuleCell1.m */,
+				47AF3F0E1E140A3B00AF4678 /* RuleCell2.h */,
+				47AF3F0F1E140A3B00AF4678 /* RuleCell2.m */,
+				47AF3F111E140EBA00AF4678 /* RuleCell3.h */,
+				47AF3F121E140EBA00AF4678 /* RuleCell3.m */,
+			);
+			name = Winning;
+			sourceTree = "<group>";
+		};
+		47F375BC1E15045E00ED6E5D /* Trend */ = {
+			isa = PBXGroup;
+			children = (
+				47F375C01E1505BE00ED6E5D /* TrendCell.h */,
+				47F375C11E1505BE00ED6E5D /* TrendCell.m */,
+				47F5E24D1E16E14D00205009 /* TrendTitleView.h */,
+				47F5E24E1E16E14D00205009 /* TrendTitleView.m */,
+				47F5E2501E16E1FC00205009 /* TrendView.h */,
+				47F5E2511E16E1FC00205009 /* TrendView.m */,
+				473056F41E174E4C007776AE /* TrendStatisticsView.h */,
+				473056F51E174E4C007776AE /* TrendStatisticsView.m */,
+				473BE6FD1E17687500A09915 /* TrendBallButtonView.h */,
+				473BE6FE1E17687500A09915 /* TrendBallButtonView.m */,
+				47D9587B1E16142600A1D318 /* TrendBaseView.h */,
+				47D9587C1E16142600A1D318 /* TrendBaseView.m */,
+			);
+			name = Trend;
+			sourceTree = "<group>";
+		};
+		7DA0B88876595317AD6AD345 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5DF3476828E97C659D1E8B7 /* Pods-TwoColorBall.debug.xcconfig */,
+				3EDED855C819AF50B84F9923 /* Pods-TwoColorBall.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		478FFC151E0B067E004F5960 /* TwoColorBall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 478FFC2D1E0B067F004F5960 /* Build configuration list for PBXNativeTarget "TwoColorBall" */;
+			buildPhases = (
+				A52EE0B33D3B1E52A2A9402A /* [CP] Check Pods Manifest.lock */,
+				478FFC121E0B067E004F5960 /* Sources */,
+				478FFC131E0B067E004F5960 /* Frameworks */,
+				478FFC141E0B067E004F5960 /* Resources */,
+				B2D79BFB042FBE1A8CB45363 /* [CP] Embed Pods Frameworks */,
+				4D84E0039F9F2FC54B4B5EA4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwoColorBall;
+			productName = TwoColorBall;
+			productReference = 478FFC161E0B067F004F5960 /* TwoColorBall.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		478FFC0E1E0B067E004F5960 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "";
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "刘明";
+				TargetAttributes = {
+					478FFC151E0B067E004F5960 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 44Y286UVV4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 478FFC111E0B067E004F5960 /* Build configuration list for PBXProject "TwoColorBall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 478FFC0D1E0B067E004F5960;
+			productRefGroup = 478FFC171E0B067F004F5960 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				478FFC151E0B067E004F5960 /* TwoColorBall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		478FFC141E0B067E004F5960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				478FFC291E0B067F004F5960 /* LaunchScreen.storyboard in Resources */,
+				4712C0311E0E568800271B08 /* winnings.plist in Resources */,
+				478FFC261E0B067F004F5960 /* Assets.xcassets in Resources */,
+				478FFC241E0B067F004F5960 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D84E0039F9F2FC54B4B5EA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwoColorBall/Pods-TwoColorBall-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A52EE0B33D3B1E52A2A9402A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2D79BFB042FBE1A8CB45363 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwoColorBall/Pods-TwoColorBall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		478FFC121E0B067E004F5960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				478FFC211E0B067F004F5960 /* FunctionListViewController.m in Sources */,
+				47C0D5571E0B1F2600C59279 /* TrendNavigationController.m in Sources */,
+				470CABE61E118A7100F4A206 /* SimpleWinning.m in Sources */,
+				47F375C21E1505BE00ED6E5D /* TrendCell.m in Sources */,
+				471D3B8A1E0E970800ED730F /* WinningListViewController.m in Sources */,
+				4742E96E1E0D6978008C4115 /* WinningList.m in Sources */,
+				473BE7021E1769F200A09915 /* BallButtonView.m in Sources */,
+				4749D3531E15557200F52719 /* TrendViewController.m in Sources */,
+				477F42AE1E0EA7D300007990 /* WinningCell.m in Sources */,
+				470CABEC1E118D2500F4A206 /* HistorySameViewController.m in Sources */,
+				47AF3F101E140A3B00AF4678 /* RuleCell2.m in Sources */,
+				471DB7341E0BF5E90065D426 /* DataManager.m in Sources */,
+				471DB7401E0BFD480065D426 /* TFHppleElements.m in Sources */,
+				47205E6A1E14A4770036B4B0 /* TrendData.m in Sources */,
+				47D86AEB1E12380B00668F96 /* StatisticsCollectionReusableView.m in Sources */,
+				4729C0C11E0B317A00A6FF3F /* FunctionCell.m in Sources */,
+				478FFC1E1E0B067F004F5960 /* AppDelegate.m in Sources */,
+				47AF3F131E140EBA00AF4678 /* RuleCell3.m in Sources */,
+				475A39F51E13926C00DC48AC /* WinningDetailViewController.m in Sources */,
+				471DB7301E0BF0930065D426 /* Reachability.m in Sources */,
+				47E744EA1E1105EB0017E90D /* BallView.m in Sources */,
+				47F5E24F1E16E14D00205009 /* TrendTitleView.m in Sources */,
+				471296021E13CA1400402038 /* WinningRuleViewController.m in Sources */,
+				470CABE91E118B6300F4A206 /* StatisticsManager.m in Sources */,
+				470CABDD1E115F9300F4A206 /* WinningBallView.m in Sources */,
+				473056F61E174E4C007776AE /* TrendStatisticsView.m in Sources */,
+				47205E671E14A42E0036B4B0 /* Ball.m in Sources */,
+				470CABE31E11894700F4A206 /* NumberCombinations.m in Sources */,
+				473BE6FF1E17687500A09915 /* TrendBallButtonView.m in Sources */,
+				47F5E2521E16E1FC00205009 /* TrendView.m in Sources */,
+				47F628D11E13FA53003DDD1C /* RuleCell1.m in Sources */,
+				47941A611E13B02C006DE196 /* PrizeCell.m in Sources */,
+				47D86AE81E12375C00668F96 /* StatisticsViewController.m in Sources */,
+				471DB73B1E0BFB2B0065D426 /* Winning.m in Sources */,
+				478FFC1B1E0B067F004F5960 /* main.m in Sources */,
+				47941A5E1E13AB85006DE196 /* MoneyCell.m in Sources */,
+				47D9587D1E16142600A1D318 /* TrendBaseView.m in Sources */,
+				4742E96B1E0D56DA008C4115 /* CommonMethod.m in Sources */,
+				4742E9711E0D6F7D008C4115 /* AFTCBClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		478FFC221E0B067F004F5960 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				478FFC231E0B067F004F5960 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		478FFC271E0B067F004F5960 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				478FFC281E0B067F004F5960 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		478FFC2B1E0B067F004F5960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		478FFC2C1E0B067F004F5960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		478FFC2E1E0B067F004F5960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5DF3476828E97C659D1E8B7 /* Pods-TwoColorBall.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44Y286UVV4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/liuming/Documents/liuming/2017工程/TwoColorBall/TwoColorBall/PublicClassPrefixHeader.pch";
+				INFOPLIST_FILE = TwoColorBall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lm.TwoColorBall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		478FFC2F1E0B067F004F5960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EDED855C819AF50B84F9923 /* Pods-TwoColorBall.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44Y286UVV4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/liuming/Documents/liuming/2017工程/TwoColorBall/TwoColorBall/PublicClassPrefixHeader.pch";
+				INFOPLIST_FILE = TwoColorBall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lm.TwoColorBall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		478FFC111E0B067E004F5960 /* Build configuration list for PBXProject "TwoColorBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				478FFC2B1E0B067F004F5960 /* Debug */,
+				478FFC2C1E0B067F004F5960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		478FFC2D1E0B067F004F5960 /* Build configuration list for PBXNativeTarget "TwoColorBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				478FFC2E1E0B067F004F5960 /* Debug */,
+				478FFC2F1E0B067F004F5960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 478FFC0E1E0B067E004F5960 /* Project object */;
+}

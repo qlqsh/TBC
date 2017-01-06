@@ -1,0 +1,25 @@
+//
+//  PublicClassPrefixHeader.pch
+//  TwoColorBall
+//
+//  Created by 刘明 on 2016/12/22.
+//  Copyright © 2016年 刘明. All rights reserved.
+//
+
+#ifndef PublicClassPrefixHeader_pch
+#define PublicClassPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PublicClassPrefixHeader_pch */
+
+// 常用颜色
+#define kRedColor kRGBColor(230.0, 83.0, 75.0)
+#define kBlueColor kRGBColor(2.0, 170.0, 238.0)
+#define kGreenColor kRGBColor(10.0, 197.0, 0.0)
+#define kOrangeColor kRGBColor(255.0, 150.0, 0.0)
+#define kYellowColor kRGBColor(253.0, 199.0, 30.0)
+#define kCyanColor kRGBColor(126.0, 212.0, 228.0)
+#define kRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define kRGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
