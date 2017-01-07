@@ -14,8 +14,8 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        CGFloat width = self.frame.size.width;
-        CGFloat height = [RuleCell1 heightOfCellWithWidth:self.frame.size.width];
+        CGFloat width = kScreenWidth;
+        CGFloat height = [RuleCell1 heightOfCellWithWidth:width];
         _awardLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, width*0.2, height)];
         _awardLabel.textAlignment = NSTextAlignmentCenter;
         _awardLabel.font = [UIFont systemFontOfSize:10.0f];

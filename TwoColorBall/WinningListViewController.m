@@ -29,7 +29,7 @@ static NSString *const kWinningCell = @"winningCell";
     DataManager *dataManager = [DataManager sharedManager];
     _winningList = [dataManager readAllWinningListInFile];
     
-    _heightOfCell = [WinningCell heightOfCellWithWidth:self.view.frame.size.width];
+    _heightOfCell = [WinningCell heightOfCellWithWidth:self.view.bounds.size.width];
 }
 
 - (void)viewDidLoad {

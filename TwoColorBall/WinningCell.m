@@ -20,7 +20,7 @@
 #pragma mark - 初始化（注册默认的是这个初始化）
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        CGFloat termWidth = self.frame.size.width;
+        CGFloat termWidth = kScreenWidth;
         _termLabel = [[UILabel alloc] initWithFrame:CGRectMake(termWidth*0.05,
                                                                kDefaultSpace,
                                                                termWidth*0.4,

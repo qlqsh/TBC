@@ -30,7 +30,6 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
     [self initializeUserInterface];
     [self initializeNetworking];
 }
@@ -100,9 +99,6 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
         default:
             break;
     }
-    [_collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]
-                                  animated:YES
-                            scrollPosition:UICollectionViewScrollPositionNone];
 }
 
 #pragma mark - Getters
@@ -158,7 +154,6 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         [DataManager sharedManager];
-        sleep(1);
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });

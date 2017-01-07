@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchScreen" id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
@@ -21,64 +21,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不中是必然的" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nud-KI-ZkO">
-                                <rect key="frame" x="0.0" y="519" width="375" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="B09-Zf-fSv">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ZRT-Xu-ny5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" red="0.92941176469999998" green="0.41568627450000001" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请理性对待" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-ik-CW8">
-                                <rect key="frame" x="0.0" y="587" width="375" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="07P-pr-hCZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" red="0.92941176469999998" green="0.41568627450000001" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中奖是偶然的" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKV-Pe-81r">
-                                <rect key="frame" x="0.0" y="451" width="375" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="CWf-Kv-8HY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" red="0.92941176469999998" green="0.41568627450000001" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="J1F-4V-oFE">
-                                <rect key="frame" x="27" y="28" width="320" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="wwW-5L-iyR"/>
-                                    <constraint firstAttribute="height" constant="320" id="zrz-cg-IOh"/>
+                                    <constraint firstAttribute="height" constant="200" id="A0e-Y6-TlP"/>
+                                    <constraint firstAttribute="width" constant="200" id="vTO-8K-ahw"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90316540002822876" green="0.32630288600921631" blue="0.2944943904876709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="sKV-Pe-81r" secondAttribute="trailing" id="7jS-hg-AXg"/>
-                            <constraint firstAttribute="trailing" secondItem="nud-KI-ZkO" secondAttribute="trailing" id="BWt-gT-W0H"/>
-                            <constraint firstItem="nud-KI-ZkO" firstAttribute="top" secondItem="sKV-Pe-81r" secondAttribute="bottom" constant="8" id="HyD-t8-35O"/>
-                            <constraint firstItem="J1F-4V-oFE" firstAttribute="centerX" secondItem="sKV-Pe-81r" secondAttribute="centerX" id="OWL-pJ-laq"/>
-                            <constraint firstItem="fqE-ik-CW8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="QXo-QN-PUR"/>
-                            <constraint firstItem="fqE-ik-CW8" firstAttribute="top" secondItem="nud-KI-ZkO" secondAttribute="bottom" constant="8" id="RKS-mt-kdL"/>
-                            <constraint firstAttribute="trailing" secondItem="fqE-ik-CW8" secondAttribute="trailing" id="cDo-Bj-Tge"/>
-                            <constraint firstItem="nud-KI-ZkO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cV2-Oy-OHz"/>
-                            <constraint firstItem="nud-KI-ZkO" firstAttribute="top" secondItem="sKV-Pe-81r" secondAttribute="bottom" constant="8" id="gay-OR-C11"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="fqE-ik-CW8" secondAttribute="bottom" constant="20" id="id5-MH-qc7"/>
-                            <constraint firstItem="sKV-Pe-81r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="jrS-v8-f7h"/>
-                            <constraint firstItem="J1F-4V-oFE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="yf7-EE-Jgj"/>
+                            <constraint firstItem="B09-Zf-fSv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="71O-xA-1Jt"/>
+                            <constraint firstItem="B09-Zf-fSv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="PHT-ma-yNQ"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-324" y="219.94002998500753"/>
+            <point key="canvasLocation" x="-831.20000000000005" y="210.94452773613196"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Launch" width="341" height="341"/>
+        <image name="Launch" width="269" height="269"/>
     </resources>
 </document>

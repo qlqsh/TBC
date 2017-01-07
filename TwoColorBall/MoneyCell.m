@@ -12,7 +12,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        CGFloat width = self.frame.size.width;
+        CGFloat width = kScreenWidth;
         _poolLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, width/2, 20.0f)];
         _poolLabel.text = @"奖池滚存";
         _poolLabel.textAlignment = NSTextAlignmentCenter;

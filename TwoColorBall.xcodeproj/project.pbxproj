@@ -486,7 +486,7 @@
 				TargetAttributes = {
 					478FFC151E0B067E004F5960 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 44Y286UVV4;
+						DevelopmentTeam = UC73M64533;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -736,7 +736,7 @@
 			baseConfigurationReference = B5DF3476828E97C659D1E8B7 /* Pods-TwoColorBall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 44Y286UVV4;
+				DEVELOPMENT_TEAM = UC73M64533;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/liuming/Documents/liuming/2017工程/TwoColorBall/TwoColorBall/PublicClassPrefixHeader.pch";
 				INFOPLIST_FILE = TwoColorBall/Info.plist;
@@ -752,7 +752,7 @@
 			baseConfigurationReference = 3EDED855C819AF50B84F9923 /* Pods-TwoColorBall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 44Y286UVV4;
+				DEVELOPMENT_TEAM = UC73M64533;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/liuming/Documents/liuming/2017工程/TwoColorBall/TwoColorBall/PublicClassPrefixHeader.pch";
 				INFOPLIST_FILE = TwoColorBall/Info.plist;
