@@ -1,34 +1,43 @@
 //
-//  TrendViewController.m
+//  TrendViewController2.m
 //  TwoColorBall
 //
-//  Created by 刘明 on 2016/12/29.
-//  Copyright © 2016年 刘明. All rights reserved.
+//  Created by 刘明 on 2017/1/9.
+//  Copyright © 2017年 刘明. All rights reserved.
 //
 
+#define kDefaultRowWidth 65.0f+25.0f*(33+16)
+#define kDefaultRowHeight 25.0f
+
 #import "TrendViewController.h"
-#import "TrendCell.h"
-#import "Winning.h"
-#import "BallView.h"
-#import "TrendBaseView.h"
+
 #import "TrendTitleView.h"
 #import "TrendView.h"
-#import "TrendData.h"
 #import "TrendStatisticsView.h"
 #import "TrendBallButtonView.h"
+
+#import "TrendData.h"
+
 #import <MBProgressHUD/MBProgressHUD.h>
 
-static NSString *const kTrendCell = @"trendCell";
+@interface TrendViewController ()
+// 数据
+@property (nonatomic, strong, readonly) NSArray *winningList;       // 获奖列表（走势整理后）
+@property (nonatomic, strong, readonly) NSArray *statisticsArray;   // 统计数组
 
-@interface TrendViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView *tableView;
+// 设置属性
 @property (nonatomic, strong) NSDictionary *settingDict;
-@property (nonatomic) CGFloat heightOfCell;
+@property (nonatomic) NSUInteger termAmount;    // 期数
+@property (nonatomic) BOOL hasMissing;          // 显示遗漏值
+@property (nonatomic) BOOL hasStatistics;       // 显示统计
+@property (nonatomic) BOOL hasSelectedBall;     // 显示选择球按钮
 
-@property (nonatomic) NSUInteger termAmount;
-@property (nonatomic) BOOL hasMissing;
-@property (nonatomic) BOOL hasStatistics;
-@property (nonatomic) BOOL hasSelectedBall;
+// 显示视图
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIView *titleView;        // (0, 0)，常驻视图
+@property (nonatomic, strong) UIView *trendView;        // (0, 25.0f)，常驻视图（30行、50行、100行）
+@property (nonatomic, strong) UIView *statisticsView;   // 动态显示视图
+@property (nonatomic, strong) UIView *selectedBallView; // 动态显示视图
 @end
 
 @implementation TrendViewController
@@ -42,10 +51,9 @@ static NSString *const kTrendCell = @"trendCell";
         TrendData *trendData = [TrendData sharedData];
         _winningList = [trendData termAndBallsWithCustomNumber:100];
         _statisticsArray = [trendData statisticsArrayWithNumber:0];
-        _heightOfCell = [TrendCell heightOfCell];
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-            [self.tableView reloadData];
+            [self.view addSubview:self.scrollView];
         });
     });
 }
@@ -53,7 +61,8 @@ static NSString *const kTrendCell = @"trendCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self initializeUserInterface];
+    
+    self.title = @"走势图";
     
     // 设置视图
     UIBarButtonItem *settingButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Setting"]
@@ -67,115 +76,29 @@ static NSString *const kTrendCell = @"trendCell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    [self removeView];
 }
 
-#pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case 0:
-            return 1;
-        case 1:
-            return self.termAmount;
-        case 2:
-            if (self.hasStatistics) {
-                return 4;
-            }
-            return 0;
-        case 3:
-            if (self.hasSelectedBall) {
-                return 1;
-            }
-            return 0;
-        default:
-            return 0;
-    }
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TrendCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[TrendCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                reuseIdentifier:kTrendCell];
-    }
-    switch (indexPath.section) {
-        case 0: {
-            TrendTitleView *trendTitleView = [[TrendTitleView alloc] init];
-            [cell.cellScrollView addSubview:trendTitleView];
-            break;
-        }
-        case 1:{
-            // 最多100行数据
-            NSArray *subArray = [_winningList subarrayWithRange:NSMakeRange(_winningList.count-self.termAmount,
-                                                                            self.termAmount)];
-            NSArray *termAndBalls = subArray[(NSUInteger)indexPath.row];
-            TrendView *trendView = [[TrendView alloc] init];
-            trendView.termLabel.text = [termAndBalls firstObject];
-            trendView.trendBaseView.hasMissing = self.hasMissing;
-            trendView.trendBaseView.trendBalls = [termAndBalls lastObject];
-            if (indexPath.row%2 == 1) {
-                trendView.state = 1;
-            } else {
-                trendView.state = 0;
-            }
-            [cell.cellScrollView addSubview:trendView];
-            break;
-        }
-        case 2: {
-            if (self.hasStatistics) {
-                TrendStatisticsView *trendStatisticsView = [[TrendStatisticsView alloc] init];
-                switch (indexPath.row) {
-                    case 0:
-                        trendStatisticsView.titleLabel.text = @"出现次数";
-                        trendStatisticsView.state = 0;
-                        break;
-                    case 1:
-                        trendStatisticsView.titleLabel.text = @"最大连出";
-                        trendStatisticsView.state = 1;
-                        break;
-                    case 2:
-                        trendStatisticsView.titleLabel.text = @"最大遗漏";
-                        trendStatisticsView.state = 2;
-                        break;
-                    case 3:
-                        trendStatisticsView.titleLabel.text = @"平均遗漏";
-                        trendStatisticsView.state = 3;
-                        break;
-                    default:
-                        break;
-                }
-                trendStatisticsView.statisticses = _statisticsArray[indexPath.row];
-                [cell.cellScrollView addSubview:trendStatisticsView];
-            }
-            break;
-        }
-        case 3: {
-            if (self.hasSelectedBall) {
-                TrendBallButtonView *trendBallButtonView = [[TrendBallButtonView alloc] init];
-                [cell.cellScrollView addSubview:trendBallButtonView];
-            }
-            break;
-        }
-        default:
-            break;
+- (void)removeView {
+    // 滚动视图删除所有子视图
+    for (UIView *subView in [_scrollView subviews]) {
+        [subView removeFromSuperview];
     }
     
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return _heightOfCell;
-}
-
-#pragma mark - 初始化界面
-- (void)initializeUserInterface {
-    self.title = @"走势图";
-    // 视图加载
-    [self.view addSubview:self.tableView];
+    // 删除滚动视图
+    for (UIView *subView in [self.view subviews]) {
+        if ([subView isKindOfClass:[UIScrollView class]]) {
+            [subView removeFromSuperview];
+        }
+    }
+    
+    // 视图全部为空
+    _titleView = nil;
+    _trendView = nil;
+    _statisticsView = nil;
+    _selectedBallView = nil;
+    _scrollView = nil;
 }
 
 #pragma mark - 设置对话框
@@ -215,22 +138,28 @@ static NSString *const kTrendCell = @"trendCell";
     [alert.view addSubview:selectedBall];
     
     UIAlertAction *defaultAction =
-        [UIAlertAction actionWithTitle:@"确认"
-                                 style:UIAlertActionStyleDefault
-                               handler:^(UIAlertAction *action) {
-                                   // 保存走势图属性设置
-                                   NSMutableDictionary *saveTrendSettingDict = [NSMutableDictionary dictionary];
-                                   saveTrendSettingDict[@"termAmount"] = @(termAmount.selectedSegmentIndex);
-                                   saveTrendSettingDict[@"missing"] = @(missing.selectedSegmentIndex);
-                                   saveTrendSettingDict[@"statistics"] = @(statistics.selectedSegmentIndex);
-                                   saveTrendSettingDict[@"selectedBall"] = @(selectedBall.selectedSegmentIndex);
-                                   [self setSettingDict:[saveTrendSettingDict copy]];
-                                   
-                                   // 延时机制。消除警告。
-                                   dispatch_after((dispatch_time_t) 0.2, dispatch_get_main_queue(), ^{
-                                       [self.tableView reloadData];
-                                   });
-                               }];
+    [UIAlertAction actionWithTitle:@"确认"
+                             style:UIAlertActionStyleDefault
+                           handler:^(UIAlertAction *action) {
+                               // 保存走势图属性设置
+                               NSMutableDictionary *saveTrendSettingDict = [NSMutableDictionary dictionary];
+                               saveTrendSettingDict[@"termAmount"] = @(termAmount.selectedSegmentIndex);
+                               saveTrendSettingDict[@"missing"] = @(missing.selectedSegmentIndex);
+                               saveTrendSettingDict[@"statistics"] = @(statistics.selectedSegmentIndex);
+                               saveTrendSettingDict[@"selectedBall"] = @(selectedBall.selectedSegmentIndex);
+                               [self setSettingDict:[saveTrendSettingDict copy]];
+                               
+                               [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                               // 清除所有视图
+                               [self removeView];
+
+                               // 延时机制。消除警告
+                               dispatch_after((dispatch_time_t) 0.2, dispatch_get_main_queue(), ^{
+                                   // 进度指示器
+                                   [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                   [self.view addSubview:self.scrollView];    
+                               });
+                           }];
     [defaultAction setValue:segmentedColor forKey:[NSString stringWithFormat:@"titleTextColor"]];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
                                                            style:UIAlertActionStyleCancel
@@ -244,19 +173,131 @@ static NSString *const kTrendCell = @"trendCell";
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-#pragma mark - 获取、设置
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame
-                                                  style:UITableViewStylePlain];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.allowsSelection = NO;
+#pragma mark - 获取
+- (UIView *)titleView {
+    if (!_titleView) {
+        _titleView = [[TrendTitleView alloc] init];
     }
     
-    return _tableView;
+    return _titleView;
+}
+
+- (UIView *)trendView {
+    if (!_trendView) {
+        _trendView = [[UIView alloc] init];
+        NSArray *subArray = [_winningList subarrayWithRange:NSMakeRange(_winningList.count-self.termAmount,
+                                                                        self.termAmount)];
+        for (NSInteger i = 0; i < self.termAmount; i++) {
+            NSArray *termAndBalls = subArray[i];
+            TrendView *trendView = [[TrendView alloc] init];
+            trendView.termLabel.text = [termAndBalls firstObject];
+            trendView.trendBaseView.hasMissing = self.hasMissing;
+            trendView.trendBaseView.trendBalls = [termAndBalls lastObject];
+            if (i%2 == 1) {
+                trendView.state = 1;
+            } else {
+                trendView.state = 0;
+            }
+            trendView.frame = CGRectMake(0.0f,
+                                         trendView.frame.size.height*i,
+                                         trendView.frame.size.width,
+                                         trendView.frame.size.height);
+            [_trendView addSubview:trendView];
+        }
+    }
+    
+    return _trendView;
+}
+
+- (UIView *)statisticsView {
+    if (!_statisticsView) {
+        _statisticsView = [[UIView alloc] init];
+        for (NSInteger i = 0; i <= 3; i++) {
+            TrendStatisticsView *trendStatisticsView = [[TrendStatisticsView alloc] init];
+            switch (i) {
+                case 0:
+                    trendStatisticsView.titleLabel.text = @"出现次数";
+                    trendStatisticsView.state = 0;
+                    break;
+                case 1:
+                    trendStatisticsView.titleLabel.text = @"最大连出";
+                    trendStatisticsView.state = 1;
+                    break;
+                case 2:
+                    trendStatisticsView.titleLabel.text = @"最大遗漏";
+                    trendStatisticsView.state = 2;
+                    break;
+                case 3:
+                    trendStatisticsView.titleLabel.text = @"平均遗漏";
+                    trendStatisticsView.state = 3;
+                    break;
+                default:
+                    break;
+            }
+            trendStatisticsView.statisticses = self.statisticsArray[i];
+            trendStatisticsView.frame = CGRectMake(0.0f,
+                                                   trendStatisticsView.frame.size.height*i,
+                                                   trendStatisticsView.frame.size.width,
+                                                   trendStatisticsView.frame.size.height);
+            [_statisticsView addSubview:trendStatisticsView];
+        }
+    }
+    
+    return _statisticsView;
+}
+
+- (UIView *)selectedBallView {
+    if (!_selectedBallView) {
+        _selectedBallView = [[TrendBallButtonView alloc] init];
+    }
+    
+    return _selectedBallView;
+}
+
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        CGRect bounds = [[UIScreen mainScreen] bounds]; // 滚动视图占满整个屏幕
+        _scrollView = [[UIScrollView alloc] initWithFrame:bounds];
+        
+        _scrollView.showsVerticalScrollIndicator = NO;
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.bounces = NO;                 // 边界无法弹动
+        _scrollView.directionalLockEnabled = YES; // 定向锁定
+        
+        // 状态栏(statusbar)
+        CGRect rectStatusBar = [[UIApplication sharedApplication] statusBarFrame];
+        // 导航栏（navigationbar）
+        CGRect rectNavigationBar = self.navigationController.navigationBar.frame;
+        CGFloat positionY = rectStatusBar.size.height + rectNavigationBar.size.height;
+        
+        UIView *titleView = self.titleView;
+        titleView.frame = CGRectMake(0.0f, positionY, kDefaultRowWidth, kDefaultRowHeight);
+        [_scrollView addSubview:titleView];
+        positionY += titleView.frame.size.height;
+        
+        UIView *trendView = self.trendView;
+        trendView.frame = CGRectMake(0.0f, positionY, kDefaultRowWidth, kDefaultRowHeight*self.termAmount);
+        [_scrollView addSubview:trendView];
+        positionY += trendView.frame.size.height;
+        
+        if (self.hasStatistics) {
+            UIView *statisticsView = self.statisticsView;
+            statisticsView.frame = CGRectMake(0.0f, positionY, kDefaultRowWidth, kDefaultRowHeight*4);
+            [_scrollView addSubview:statisticsView];
+            positionY += statisticsView.frame.size.height;
+        }
+        
+        if (self.hasSelectedBall) {
+            UIView *selectedBallView = self.selectedBallView;
+            selectedBallView.frame = CGRectMake(0.0f, positionY, kDefaultRowWidth, kDefaultRowHeight);
+            [_scrollView addSubview:selectedBallView];
+            positionY += selectedBallView.frame.size.height;
+        }
+        
+        _scrollView.contentSize = CGSizeMake(kDefaultRowWidth, positionY);
+    }
+    
+    return _scrollView;
 }
 
 - (void)setSettingDict:(NSDictionary *)settingDict {
@@ -307,4 +348,5 @@ static NSString *const kTrendCell = @"trendCell";
     }
     return YES;
 }
+
 @end

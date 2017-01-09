@@ -8,22 +8,18 @@
 
 #import "TrendTitleView.h"
 
-#define kDefaultWidth 25.0f
-
 @implementation TrendTitleView
 
 - (instancetype)init {
-    if (self = [super init]) {
+    if (self = [super initWithFrame:CGRectMake(0.0f, 0.0f, kTitleWidth+kLabelWidth*(33+16), kLabelWidth)]) {
         UIImageView *numIssue = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NumIssue"]];
         [self addSubview:numIssue];
-
-        CGFloat numIssueWidth = numIssue.frame.size.width;
         
         for (NSUInteger i = 1; i <= 33; i++) {
-            UILabel *redLabel = [[UILabel alloc] initWithFrame:CGRectMake(numIssueWidth+kDefaultWidth*(i-1),
-                                                                           0.0f,
-                                                                           kDefaultWidth,
-                                                                           kDefaultWidth)];
+            UILabel *redLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTitleWidth+kLabelWidth*(i-1),
+                                                                          0.0f,
+                                                                          kLabelWidth,
+                                                                          kLabelWidth)];
             NSString *valueString = [NSString stringWithFormat:@"%lu", (unsigned long)i];
             if (i < 10) {
                 valueString = [NSString stringWithFormat:@"0%lu", (unsigned long)i];
@@ -39,10 +35,10 @@
         }
         
         for (NSUInteger i = 1; i <= 16; i++) {
-            UILabel *blueLabel = [[UILabel alloc] initWithFrame:CGRectMake(numIssueWidth+kDefaultWidth*(33+i-1),
+            UILabel *blueLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTitleWidth+kLabelWidth*(33+i-1),
                                                                            0.0f,
-                                                                           kDefaultWidth,
-                                                                           kDefaultWidth)];
+                                                                           kLabelWidth,
+                                                                           kLabelWidth)];
             NSString *valueString = [NSString stringWithFormat:@"%lu", (unsigned long)i];
             if (i < 10) {
                 valueString = [NSString stringWithFormat:@"0%lu", (unsigned long)i];

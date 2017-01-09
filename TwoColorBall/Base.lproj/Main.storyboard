@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="2052" y="994"/>
         </scene>
-        <!--Trend Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="OD3-rs-AGo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqT-vy-CaD" customClass="TrendNavigationController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqT-vy-CaD" customClass="CustomNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="asT-8V-Nd6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

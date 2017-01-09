@@ -8,16 +8,13 @@
 
 #import "TrendView.h"
 
-#define kTermLabelWidth 65.0f
-#define kDefaultWidth 25.0f
-
 @implementation TrendView
 
 - (instancetype)init {
-    if (self = [super init]) {
+    if (self = [super initWithFrame:CGRectMake(0.0f, 0.0f, kTitleWidth+kLabelWidth*(33+16), kLabelWidth)]) {
         _termLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f,
-                                                               kTermLabelWidth,
-                                                               kDefaultWidth)];
+                                                               kTitleWidth,
+                                                               kLabelWidth)];
         _termLabel.font = [UIFont systemFontOfSize:11.0f];
         _termLabel.textAlignment = NSTextAlignmentCenter;
         _termLabel.layer.borderWidth = 0.5f;
@@ -26,7 +23,7 @@
         _trendBaseView = [[TrendBaseView alloc] initWithFrame:CGRectMake(_termLabel.frame.size.width,
                                                                          0.0f,
                                                                          [TrendBaseView widthOfView],
-                                                                         kDefaultWidth)];
+                                                                         kLabelWidth)];
         [self addSubview:_termLabel];
         [self addSubview:_trendBaseView];
         [self redAndBlueLine];
@@ -49,7 +46,7 @@
     CALayer *layer = [CALayer layer];
     
     layer.backgroundColor = [UIColor grayColor].CGColor;
-    layer.frame = CGRectMake(kTermLabelWidth+kDefaultWidth*33, 0.0f, 1.0f, kDefaultWidth);
+    layer.frame = CGRectMake(kTitleWidth+kLabelWidth*33, 0.0f, 1.0f, kLabelWidth);
     
     [self.layer addSublayer:layer];
 }

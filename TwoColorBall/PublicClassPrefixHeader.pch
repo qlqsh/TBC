@@ -27,3 +27,7 @@
 // 屏幕大小
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+// 走势图常用设置
+#define kTitleWidth 65.0f
+#define kLabelWidth 25.0f

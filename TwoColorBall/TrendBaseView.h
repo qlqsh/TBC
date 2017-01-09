@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define kDefaultWidth 25.0f
-
 @interface TrendBaseView : UIView
 @property (nonatomic, strong) NSArray *winningBalls;
 @property (nonatomic, strong) NSArray *trendBalls;

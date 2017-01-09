@@ -8,26 +8,23 @@
 
 #import "TrendStatisticsView.h"
 
-#define kDefaultWidth 25.0f
-
 @implementation TrendStatisticsView
 
 - (instancetype)init {
-    if (self = [super init]) {
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 65.0f, kDefaultWidth)];
+    if (self = [super initWithFrame:CGRectMake(0.0f, 0.0f, kTitleWidth+kLabelWidth*(33+16), kLabelWidth)]) {
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, kTitleWidth, kLabelWidth)];
         _titleLabel.font = [UIFont systemFontOfSize:11.0f];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.layer.borderWidth = 0.5f;
         _titleLabel.layer.borderColor = kRGBColor(230.0f, 230.0f, 230.0f).CGColor;
         [self addSubview:_titleLabel];
         
-        CGFloat titleWidth = _titleLabel.frame.size.width;
         NSMutableArray *labelArray = [NSMutableArray arrayWithCapacity:(33+16)];
         for (NSUInteger i = 1; i <= (33+16); i++) {
-            UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleWidth+kDefaultWidth*(i-1),
+            UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTitleWidth+kLabelWidth*(i-1),
                                                                              0.0f,
-                                                                             kDefaultWidth,
-                                                                             kDefaultWidth)];
+                                                                             kLabelWidth,
+                                                                             kLabelWidth)];
             numberLabel.layer.borderWidth = 0.5f;
             numberLabel.layer.borderColor = kRGBColor(230.0f, 230.0f, 230.0f).CGColor;
             numberLabel.textAlignment = NSTextAlignmentCenter;

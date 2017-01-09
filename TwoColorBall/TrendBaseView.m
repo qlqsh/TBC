@@ -17,10 +17,10 @@
         NSMutableArray *ballViewArray = [NSMutableArray arrayWithCapacity:33+16];
         BallView *ballView = nil;
         for (NSUInteger i = 1; i <= (33+16); i++) {
-            ballView = [[BallView alloc] initWithFrame:CGRectMake(kDefaultWidth*(i-1),
+            ballView = [[BallView alloc] initWithFrame:CGRectMake(kLabelWidth*(i-1),
                                                                   0.0f,
-                                                                  kDefaultWidth,
-                                                                  kDefaultWidth)];
+                                                                  kLabelWidth,
+                                                                  kLabelWidth)];
             ballView.textLabel.textColor = kRGBColor(230.0f, 230.0f, 230.0f);
             ballView.layer.borderWidth = 0.5f;
             ballView.layer.borderColor = kRGBColor(230.0f, 230.0f, 230.0f).CGColor;
@@ -32,29 +32,6 @@
     
     return self;
 }
-
-// 绘制网格
-//- (void)drawGrid {
-//    UIGraphicsBeginImageContext(self.bounds.size);
-//    UIBezierPath *path = [UIBezierPath bezierPath];
-//    CGPoint startPoint = CGPointMake(0.0f, 0.0f);
-//    for (NSUInteger i = 0; i < (33+16); i++) {
-//        CGPoint nextPoint = CGPointMake(i*kDefaultWidth, kDefaultWidth);
-//        [path moveToPoint:startPoint];
-//        [path addLineToPoint:nextPoint];
-//        startPoint = nextPoint;
-//    }
-//    [path stroke];
-//    UIGraphicsEndImageContext();
-//    
-//    CAShapeLayer *slayer = [CAShapeLayer layer];
-//    slayer.path = path.CGPath;
-//    slayer.strokeColor = kBlueColor.CGColor;
-//    slayer.fillColor = [UIColor clearColor].CGColor;
-//    slayer.lineWidth = 1.0f;
-//    
-//    [self.layer addSublayer:slayer];
-//}
 
 #pragma mark - 设置内容
 // 设置红、蓝球
@@ -110,11 +87,11 @@
 
 #pragma mark - 类方法
 + (CGFloat)heightOfView {
-    return kDefaultWidth;
+    return kLabelWidth;
 }
 
 + (CGFloat)widthOfView {
-    return kDefaultWidth*(33+16);
+    return kLabelWidth*(33+16);
 }
 
 @end
