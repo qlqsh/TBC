@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class BallView;
 
 // 获奖视图（6红+1蓝）

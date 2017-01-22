@@ -7,7 +7,6 @@
 //
 
 #import "CustomNavigationController.h"
-#import "TrendViewController.h"
 
 @interface CustomNavigationController ()
 
@@ -16,29 +15,31 @@
 @implementation CustomNavigationController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	[super viewDidLoad];
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - 屏幕方向
+
 // 是否支持转屏。
 - (BOOL)shouldAutorotate {
-    return NO;
+	return NO;
 }
 
 // 支持哪些转屏方向。
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
+	return UIInterfaceOrientationMaskPortrait;
 }
 
 // 默认的屏幕方向。
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return UIInterfaceOrientationPortrait;
+	return UIInterfaceOrientationPortrait;
 }
 
 @end

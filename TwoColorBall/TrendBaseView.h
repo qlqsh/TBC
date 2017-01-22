@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TrendBaseView : UIView
+
 @property (nonatomic, strong) NSArray *winningBalls;
 @property (nonatomic, strong) NSArray *trendBalls;
 @property (nonatomic, strong, readonly) NSArray *ballViews; // 球视图数组（33红球+16蓝球）
@@ -16,6 +17,7 @@
 @property (nonatomic) BOOL hasMissing;
 
 + (CGFloat)heightOfView;
+
 + (CGFloat)widthOfView;
 
 // 设置红、蓝球

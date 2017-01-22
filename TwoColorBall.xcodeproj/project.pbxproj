@@ -30,7 +30,10 @@
 		4742E96E1E0D6978008C4115 /* WinningList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4742E96D1E0D6978008C4115 /* WinningList.m */; };
 		4742E9711E0D6F7D008C4115 /* AFTCBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4742E9701E0D6F7D008C4115 /* AFTCBClient.m */; };
 		475A39F51E13926C00DC48AC /* WinningDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475A39F41E13926C00DC48AC /* WinningDetailViewController.m */; };
+		476E4C951E290F8E00A05526 /* ConditionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 476E4C941E290F8E00A05526 /* ConditionCell.m */; };
+		4777A7771E23CCAD009B315A /* ConditionTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4777A7761E23CCAD009B315A /* ConditionTrendViewController.m */; };
 		477F42AE1E0EA7D300007990 /* WinningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477F42AD1E0EA7D300007990 /* WinningCell.m */; };
+		478AC5C81E280088000D7113 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 478AC5C71E280088000D7113 /* ButtonCell.m */; };
 		478FFC1B1E0B067F004F5960 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 478FFC1A1E0B067F004F5960 /* main.m */; };
 		478FFC1E1E0B067F004F5960 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 478FFC1D1E0B067F004F5960 /* AppDelegate.m */; };
 		478FFC211E0B067F004F5960 /* FunctionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478FFC201E0B067F004F5960 /* FunctionListViewController.m */; };
@@ -39,18 +42,25 @@
 		478FFC291E0B067F004F5960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478FFC271E0B067F004F5960 /* LaunchScreen.storyboard */; };
 		47941A5E1E13AB85006DE196 /* MoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47941A5D1E13AB85006DE196 /* MoneyCell.m */; };
 		47941A611E13B02C006DE196 /* PrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47941A601E13B02C006DE196 /* PrizeCell.m */; };
+		47A260581E3249E100FA62BE /* WinningMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A260571E3249E100FA62BE /* WinningMoneyCell.m */; };
+		47A64E061E3060CA0033AD7B /* BallList.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A64E051E3060CA0033AD7B /* BallList.m */; };
 		47AF3F101E140A3B00AF4678 /* RuleCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AF3F0F1E140A3B00AF4678 /* RuleCell2.m */; };
 		47AF3F131E140EBA00AF4678 /* RuleCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AF3F121E140EBA00AF4678 /* RuleCell3.m */; };
 		47B86A071E22A5540031DC3C /* TrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B86A061E22A5540031DC3C /* TrendViewController.m */; };
 		47C0D5571E0B1F2600C59279 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C0D5561E0B1F2600C59279 /* CustomNavigationController.m */; };
+		47C0EBDD1E2A5F1C008A4B35 /* ResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C0EBDC1E2A5F1C008A4B35 /* ResultCell.m */; };
 		47D86AE81E12375C00668F96 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D86AE71E12375C00668F96 /* StatisticsViewController.m */; };
 		47D86AEB1E12380B00668F96 /* StatisticsCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D86AEA1E12380B00668F96 /* StatisticsCollectionReusableView.m */; };
 		47D9587D1E16142600A1D318 /* TrendBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D9587C1E16142600A1D318 /* TrendBaseView.m */; };
+		47E68F191E2C928800ABDECC /* CalculateMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E68F181E2C928800ABDECC /* CalculateMoneyViewController.m */; };
 		47E744EA1E1105EB0017E90D /* BallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E744E91E1105EB0017E90D /* BallView.m */; };
+		47ED3E771E2D316D0076EA5F /* MyNumbersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED3E761E2D316D0076EA5F /* MyNumbersCell.m */; };
+		47F203E11E2CECE100C14ED9 /* CMButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F203E01E2CECE100C14ED9 /* CMButtonCell.m */; };
 		47F5E24F1E16E14D00205009 /* TrendTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F5E24E1E16E14D00205009 /* TrendTitleView.m */; };
 		47F5E2521E16E1FC00205009 /* TrendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F5E2511E16E1FC00205009 /* TrendView.m */; };
 		47F628D11E13FA53003DDD1C /* RuleCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F628D01E13FA53003DDD1C /* RuleCell1.m */; };
 		8FEF615BFEBEDC5C8018BDAA /* libPods-TwoColorBall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EAE093A1879DD72773DDCF /* libPods-TwoColorBall.a */; };
+		AF1BAFEE8FA8BD8AB7828725 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF1BAEC206429B54133BA361 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,8 +110,14 @@
 		4742E9701E0D6F7D008C4115 /* AFTCBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTCBClient.m; sourceTree = "<group>"; };
 		475A39F31E13926C00DC48AC /* WinningDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningDetailViewController.h; sourceTree = "<group>"; };
 		475A39F41E13926C00DC48AC /* WinningDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningDetailViewController.m; sourceTree = "<group>"; };
+		476E4C931E290F8E00A05526 /* ConditionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionCell.h; sourceTree = "<group>"; };
+		476E4C941E290F8E00A05526 /* ConditionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionCell.m; sourceTree = "<group>"; };
+		4777A7751E23CCAD009B315A /* ConditionTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionTrendViewController.h; sourceTree = "<group>"; };
+		4777A7761E23CCAD009B315A /* ConditionTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionTrendViewController.m; sourceTree = "<group>"; };
 		477F42AC1E0EA7D300007990 /* WinningCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningCell.h; sourceTree = "<group>"; };
 		477F42AD1E0EA7D300007990 /* WinningCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningCell.m; sourceTree = "<group>"; };
+		478AC5C61E280088000D7113 /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
+		478AC5C71E280088000D7113 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
 		478FFC161E0B067F004F5960 /* TwoColorBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoColorBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478FFC1A1E0B067F004F5960 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		478FFC1C1E0B067F004F5960 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +132,10 @@
 		47941A5D1E13AB85006DE196 /* MoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyCell.m; sourceTree = "<group>"; };
 		47941A5F1E13B02C006DE196 /* PrizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeCell.h; sourceTree = "<group>"; };
 		47941A601E13B02C006DE196 /* PrizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeCell.m; sourceTree = "<group>"; };
+		47A260561E3249E100FA62BE /* WinningMoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningMoneyCell.h; sourceTree = "<group>"; };
+		47A260571E3249E100FA62BE /* WinningMoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningMoneyCell.m; sourceTree = "<group>"; };
+		47A64E041E3060CA0033AD7B /* BallList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallList.h; sourceTree = "<group>"; };
+		47A64E051E3060CA0033AD7B /* BallList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallList.m; sourceTree = "<group>"; };
 		47AF3F0E1E140A3B00AF4678 /* RuleCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleCell2.h; sourceTree = "<group>"; };
 		47AF3F0F1E140A3B00AF4678 /* RuleCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleCell2.m; sourceTree = "<group>"; };
 		47AF3F111E140EBA00AF4678 /* RuleCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleCell3.h; sourceTree = "<group>"; };
@@ -124,20 +144,29 @@
 		47B86A061E22A5540031DC3C /* TrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendViewController.m; sourceTree = "<group>"; };
 		47C0D5551E0B1F2600C59279 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		47C0D5561E0B1F2600C59279 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
+		47C0EBDB1E2A5F1C008A4B35 /* ResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCell.h; sourceTree = "<group>"; };
+		47C0EBDC1E2A5F1C008A4B35 /* ResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCell.m; sourceTree = "<group>"; };
 		47D86AE61E12375C00668F96 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		47D86AE71E12375C00668F96 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		47D86AE91E12380B00668F96 /* StatisticsCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsCollectionReusableView.h; sourceTree = "<group>"; };
 		47D86AEA1E12380B00668F96 /* StatisticsCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsCollectionReusableView.m; sourceTree = "<group>"; };
 		47D9587B1E16142600A1D318 /* TrendBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendBaseView.h; sourceTree = "<group>"; };
 		47D9587C1E16142600A1D318 /* TrendBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendBaseView.m; sourceTree = "<group>"; };
+		47E68F171E2C928800ABDECC /* CalculateMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateMoneyViewController.h; sourceTree = "<group>"; };
+		47E68F181E2C928800ABDECC /* CalculateMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateMoneyViewController.m; sourceTree = "<group>"; };
 		47E744E81E1105EB0017E90D /* BallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallView.h; sourceTree = "<group>"; };
 		47E744E91E1105EB0017E90D /* BallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallView.m; sourceTree = "<group>"; };
+		47ED3E751E2D316D0076EA5F /* MyNumbersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNumbersCell.h; sourceTree = "<group>"; };
+		47ED3E761E2D316D0076EA5F /* MyNumbersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNumbersCell.m; sourceTree = "<group>"; };
+		47F203DF1E2CECE100C14ED9 /* CMButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMButtonCell.h; sourceTree = "<group>"; };
+		47F203E01E2CECE100C14ED9 /* CMButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMButtonCell.m; sourceTree = "<group>"; };
 		47F5E24D1E16E14D00205009 /* TrendTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendTitleView.h; sourceTree = "<group>"; };
 		47F5E24E1E16E14D00205009 /* TrendTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendTitleView.m; sourceTree = "<group>"; };
 		47F5E2501E16E1FC00205009 /* TrendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendView.h; sourceTree = "<group>"; };
 		47F5E2511E16E1FC00205009 /* TrendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendView.m; sourceTree = "<group>"; };
 		47F628CF1E13FA53003DDD1C /* RuleCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleCell1.h; sourceTree = "<group>"; };
 		47F628D01E13FA53003DDD1C /* RuleCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleCell1.m; sourceTree = "<group>"; };
+		AF1BAEC206429B54133BA361 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B5DF3476828E97C659D1E8B7 /* Pods-TwoColorBall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoColorBall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoColorBall/Pods-TwoColorBall.debug.xcconfig"; sourceTree = "<group>"; };
 		B5EAE093A1879DD72773DDCF /* libPods-TwoColorBall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwoColorBall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -193,6 +222,8 @@
 				470CABE21E11894700F4A206 /* NumberCombinations.m */,
 				470CABE41E118A7100F4A206 /* SimpleWinning.h */,
 				470CABE51E118A7100F4A206 /* SimpleWinning.m */,
+				47A64E041E3060CA0033AD7B /* BallList.h */,
+				47A64E051E3060CA0033AD7B /* BallList.m */,
 			);
 			name = Statistics;
 			sourceTree = "<group>";
@@ -221,12 +252,16 @@
 		471DB73D1E0BFD130065D426 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				47E68F1A1E2C929100ABDECC /* CalculateMoney */,
+				4777A7741E23CC68009B315A /* ConditionTrend */,
 				4749D3501E15543500F52719 /* Trend */,
 				475A39F21E13924700DC48AC /* Winning */,
 				47AF3F151E14151C00AF4678 /* Statistics */,
 				47AF3F141E14150D00AF4678 /* HistorySame */,
 				478FFC1F1E0B067F004F5960 /* FunctionListViewController.h */,
 				478FFC201E0B067F004F5960 /* FunctionListViewController.m */,
+				47C0D5551E0B1F2600C59279 /* CustomNavigationController.h */,
+				47C0D5561E0B1F2600C59279 /* CustomNavigationController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +315,8 @@
 		4729C0BD1E0B312A00A6FF3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47F203DE1E2CECC000C14ED9 /* CalculateMoney */,
+				4753D9231E2410C000A6517C /* ConditionTrend */,
 				47F375BC1E15045E00ED6E5D /* Trend */,
 				47EC4FE71E125B1F00CA2841 /* Winning */,
 				470CABDF1E11657700F4A206 /* Statistics */,
@@ -313,10 +350,21 @@
 			children = (
 				47B86A051E22A5540031DC3C /* TrendViewController.h */,
 				47B86A061E22A5540031DC3C /* TrendViewController.m */,
-				47C0D5551E0B1F2600C59279 /* CustomNavigationController.h */,
-				47C0D5561E0B1F2600C59279 /* CustomNavigationController.m */,
 			);
 			name = Trend;
+			sourceTree = "<group>";
+		};
+		4753D9231E2410C000A6517C /* ConditionTrend */ = {
+			isa = PBXGroup;
+			children = (
+				478AC5C61E280088000D7113 /* ButtonCell.h */,
+				478AC5C71E280088000D7113 /* ButtonCell.m */,
+				476E4C931E290F8E00A05526 /* ConditionCell.h */,
+				476E4C941E290F8E00A05526 /* ConditionCell.m */,
+				47C0EBDB1E2A5F1C008A4B35 /* ResultCell.h */,
+				47C0EBDC1E2A5F1C008A4B35 /* ResultCell.m */,
+			);
+			name = ConditionTrend;
 			sourceTree = "<group>";
 		};
 		475A39F21E13924700DC48AC /* Winning */ = {
@@ -330,6 +378,15 @@
 				471296011E13CA1400402038 /* WinningRuleViewController.m */,
 			);
 			name = Winning;
+			sourceTree = "<group>";
+		};
+		4777A7741E23CC68009B315A /* ConditionTrend */ = {
+			isa = PBXGroup;
+			children = (
+				4777A7751E23CCAD009B315A /* ConditionTrendViewController.h */,
+				4777A7761E23CCAD009B315A /* ConditionTrendViewController.m */,
+			);
+			name = ConditionTrend;
 			sourceTree = "<group>";
 		};
 		478FFC0D1E0B067E004F5960 = {
@@ -371,6 +428,7 @@
 				478FFC271E0B067F004F5960 /* LaunchScreen.storyboard */,
 				478FFC1A1E0B067F004F5960 /* main.m */,
 				478FFC2A1E0B067F004F5960 /* Info.plist */,
+				AF1BAEC206429B54133BA361 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -401,6 +459,15 @@
 			name = Statistics;
 			sourceTree = "<group>";
 		};
+		47E68F1A1E2C929100ABDECC /* CalculateMoney */ = {
+			isa = PBXGroup;
+			children = (
+				47E68F171E2C928800ABDECC /* CalculateMoneyViewController.h */,
+				47E68F181E2C928800ABDECC /* CalculateMoneyViewController.m */,
+			);
+			name = CalculateMoney;
+			sourceTree = "<group>";
+		};
 		47EC4FE71E125B1F00CA2841 /* Winning */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +485,19 @@
 				47AF3F121E140EBA00AF4678 /* RuleCell3.m */,
 			);
 			name = Winning;
+			sourceTree = "<group>";
+		};
+		47F203DE1E2CECC000C14ED9 /* CalculateMoney */ = {
+			isa = PBXGroup;
+			children = (
+				47F203DF1E2CECE100C14ED9 /* CMButtonCell.h */,
+				47F203E01E2CECE100C14ED9 /* CMButtonCell.m */,
+				47ED3E751E2D316D0076EA5F /* MyNumbersCell.h */,
+				47ED3E761E2D316D0076EA5F /* MyNumbersCell.m */,
+				47A260561E3249E100FA62BE /* WinningMoneyCell.h */,
+				47A260571E3249E100FA62BE /* WinningMoneyCell.m */,
+			);
+			name = CalculateMoney;
 			sourceTree = "<group>";
 		};
 		47F375BC1E15045E00ED6E5D /* Trend */ = {
@@ -513,6 +593,7 @@
 				4712C0311E0E568800271B08 /* winnings.plist in Resources */,
 				478FFC261E0B067F004F5960 /* Assets.xcassets in Resources */,
 				478FFC241E0B067F004F5960 /* Main.storyboard in Resources */,
+				AF1BAFEE8FA8BD8AB7828725 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,10 +652,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47ED3E771E2D316D0076EA5F /* MyNumbersCell.m in Sources */,
 				478FFC211E0B067F004F5960 /* FunctionListViewController.m in Sources */,
 				47C0D5571E0B1F2600C59279 /* CustomNavigationController.m in Sources */,
+				47C0EBDD1E2A5F1C008A4B35 /* ResultCell.m in Sources */,
 				470CABE61E118A7100F4A206 /* SimpleWinning.m in Sources */,
 				471D3B8A1E0E970800ED730F /* WinningListViewController.m in Sources */,
+				4777A7771E23CCAD009B315A /* ConditionTrendViewController.m in Sources */,
 				4742E96E1E0D6978008C4115 /* WinningList.m in Sources */,
 				473BE7021E1769F200A09915 /* BallButtonView.m in Sources */,
 				477F42AE1E0EA7D300007990 /* WinningCell.m in Sources */,
@@ -591,14 +675,20 @@
 				471DB7301E0BF0930065D426 /* Reachability.m in Sources */,
 				47E744EA1E1105EB0017E90D /* BallView.m in Sources */,
 				47F5E24F1E16E14D00205009 /* TrendTitleView.m in Sources */,
+				47E68F191E2C928800ABDECC /* CalculateMoneyViewController.m in Sources */,
 				4710F6EC1E1F6460004C3128 /* README.md in Sources */,
+				47F203E11E2CECE100C14ED9 /* CMButtonCell.m in Sources */,
 				471296021E13CA1400402038 /* WinningRuleViewController.m in Sources */,
 				470CABE91E118B6300F4A206 /* StatisticsManager.m in Sources */,
+				478AC5C81E280088000D7113 /* ButtonCell.m in Sources */,
 				470CABDD1E115F9300F4A206 /* WinningBallView.m in Sources */,
 				473056F61E174E4C007776AE /* TrendStatisticsView.m in Sources */,
+				47A260581E3249E100FA62BE /* WinningMoneyCell.m in Sources */,
 				47205E671E14A42E0036B4B0 /* Ball.m in Sources */,
+				47A64E061E3060CA0033AD7B /* BallList.m in Sources */,
 				470CABE31E11894700F4A206 /* NumberCombinations.m in Sources */,
 				473BE6FF1E17687500A09915 /* TrendBallButtonView.m in Sources */,
+				476E4C951E290F8E00A05526 /* ConditionCell.m in Sources */,
 				47F5E2521E16E1FC00205009 /* TrendView.m in Sources */,
 				47F628D11E13FA53003DDD1C /* RuleCell1.m in Sources */,
 				47941A611E13B02C006DE196 /* PrizeCell.m in Sources */,

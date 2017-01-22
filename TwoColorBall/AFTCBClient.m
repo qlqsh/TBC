@@ -13,16 +13,16 @@ static NSString *const AFCHHBaseURLString = @"http://kaijiang.zhcw.com/lishishuj
 @implementation AFTCBClient
 
 + (instancetype)sharedClient {
-    static AFTCBClient *_sharedClient = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _sharedClient = [[AFTCBClient alloc] initWithBaseURL:[NSURL URLWithString:AFCHHBaseURLString]];
-        _sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
-        _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-        _sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    });
-    
-    return _sharedClient;
+	static AFTCBClient *_sharedClient = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		_sharedClient = [[AFTCBClient alloc] initWithBaseURL:[NSURL URLWithString:AFCHHBaseURLString]];
+		_sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
+		_sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+		_sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+	});
+
+	return _sharedClient;
 }
 
 @end

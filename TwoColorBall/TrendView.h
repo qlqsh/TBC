@@ -10,7 +10,9 @@
 #import "TrendBaseView.h"
 
 @interface TrendView : UIView
+
 @property (nonatomic, strong) UILabel *termLabel;
 @property (nonatomic, strong) TrendBaseView *trendBaseView;
 @property (nonatomic) NSUInteger state;
+
 @end

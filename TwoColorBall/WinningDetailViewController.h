@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class Winning;
 
 @interface WinningDetailViewController : UIViewController
+
 @property (nonatomic, strong) Winning *winning;
+
 @end

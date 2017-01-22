@@ -15,71 +15,77 @@
  */
 @implementation NumberCombinations
 
+
 #pragma mark - 初始化
+
 - (instancetype)initWithString:(NSString *)numberString {
-    NSArray *numberArray = [[numberString componentsSeparatedByString:@" "] copy];
-    return [self initWithArray:numberArray];
+	NSArray *numberArray = [[numberString componentsSeparatedByString:@" "] copy];
+	return [self initWithArray:numberArray];
 }
 
 - (instancetype)initWithArray:(NSArray *)numberArray {
-    if (self = [super init]) {
-        _numbers = [numberArray copy];
-        _showNumber = 1;
-    }
-    
-    return self;
+	if (self = [super init]) {
+		_numbers = [numberArray copy];
+		_showNumber = 1;
+	}
+
+	return self;
 }
 
+
 #pragma mark - 属性
+
 - (NSNumber *)sumValue {
-    return [_numbers valueForKeyPath:@"@sum.floatValue"];
+	return [_numbers valueForKeyPath:@"@sum.floatValue"];
 }
 
 - (BOOL)hasContinuous {
-    NSUInteger prevValue = (NSUInteger) [_numbers[0] integerValue];
-    for (NSUInteger i = 1; i < _numbers.count; i++) {
-        NSUInteger currentValue = (NSUInteger) [_numbers[i] integerValue];
-        if (currentValue - prevValue == 1) {
-            return YES;
-        }
-        prevValue = currentValue;
-    }
-    return NO;
+	NSUInteger prevValue = (NSUInteger) [_numbers[0] integerValue];
+	for (NSUInteger i = 1; i < _numbers.count; i++) {
+		NSUInteger currentValue = (NSUInteger) [_numbers[i] integerValue];
+		if (currentValue - prevValue == 1) {
+			return YES;
+		}
+		prevValue = currentValue;
+	}
+	return NO;
 }
 
 - (NSDictionary *)numbersCombiningDictionary {
-    NSMutableDictionary *combiningDict = [NSMutableDictionary dictionary];
-    for (NSUInteger i = 1; i <= _numbers.count; i++) {
-        NSArray *combining = [self combining:i];
-        combiningDict[@(i)] = combining;
-    }
-    
-    return [combiningDict copy];
+	NSMutableDictionary *combiningDict = [NSMutableDictionary dictionary];
+	for (NSUInteger i = 1; i <= _numbers.count; i++) {
+		NSArray *combining = [self combining:i];
+		combiningDict[@(i)] = combining;
+	}
+
+	return [combiningDict copy];
 }
 
+
 #pragma mark - 数字组合方法
+
 // 数字组合里所有数字出现的指定个数的组合
 - (NSArray *)combining:(NSUInteger)number {
-    if (number == 1) {
-        return _numbers;
-    }
-    
-    if (number >= _numbers.count) {
-        return @[[self toString]];
-    }
-    
-    switch (number) {
-        case 2:
-            return [self combiningWithArray:[self combining:1]];
-        case 3:
-            return [self combiningWithArray:[self combining:2]];
-        case 4:
-            return [self combiningWithArray:[self combining:3]];
-        case 5:
-            return [self combiningWithArray:[self combining:4]];
-        default:
-            return _numbers;
-    }
+	if (number == 1) {
+		return _numbers;
+	}
+
+	if (number >= _numbers.count) {
+		return @[[self toString]];
+	}
+
+	switch (number) {
+		case 2:
+			return [self combiningWithArray:[self combining:1]];
+		case 3:
+			return [self combiningWithArray:[self combining:2]];
+		case 4:
+			return [self combiningWithArray:[self combining:3]];
+		case 5:
+			return [self combiningWithArray:[self combining:4]];
+		default:
+			return _numbers;
+	}
 }
 
 /**
@@ -93,23 +99,24 @@
  *  @return 组合后的数组。
  */
 - (NSArray *)combiningWithArray:(NSArray *)numberArray {
-    NSMutableArray *combiningArray = [NSMutableArray array];
-    for (NSUInteger i = 0; i < numberArray.count; i++) {
-        for (NSUInteger j = 0; j < _numbers.count; j++) {
-            NSArray *childArray = [numberArray[i] componentsSeparatedByString:@" "];
-            NSInteger lastObjectValue = [childArray.lastObject integerValue];
-            if ([_numbers[j] integerValue] > lastObjectValue) {
-                
-                [combiningArray addObject:[NSString stringWithFormat:@"%@ %@", numberArray[i], _numbers[j]]];
-            }
-        }
-    }
-    
-    return [combiningArray copy];
+	NSMutableArray *combiningArray = [NSMutableArray array];
+	for (NSUInteger i = 0; i < numberArray.count; i++) {
+		for (NSUInteger j = 0; j < _numbers.count; j++) {
+			NSArray *childArray = [numberArray[i] componentsSeparatedByString:@" "];
+			NSInteger lastObjectValue = [childArray.lastObject integerValue];
+			if ([_numbers[j] integerValue] > lastObjectValue) {
+				[combiningArray addObject:[NSString stringWithFormat:@"%@ %@",
+																	 numberArray[i], _numbers[j]]];
+			}
+		}
+	}
+
+	return [combiningArray copy];
 }
 
 
 #pragma mark - 公开方法
+
 /**
  *  是否包含指定数字或数字组合。
  *
@@ -118,49 +125,51 @@
  *  @return YES：包含，NO：不包含。
  */
 - (BOOL)contains:(NSString *)numbersString {
-    NSArray *numberArray = [numbersString componentsSeparatedByString:@" "];
-    for (NSString *numberString in numberArray) {
-        if (![_numbers containsObject:numberString]) {
-            return NO;
-        }
-    }
-    
-    return YES;
+	NSArray *numberArray = [numbersString componentsSeparatedByString:@" "];
+	for (NSString *numberString in numberArray) {
+		if (![_numbers containsObject:numberString]) {
+			return NO;
+		}
+	}
+
+	return YES;
 }
 
 // 数字组合中的数字显示为字符串形式
 - (NSString *)toString {
-    NSMutableString *numbersString = [NSMutableString string];
-    for (NSString *numberString in _numbers) {
-        [numbersString appendFormat:@"%@ ", numberString];
-    }
-    
-    return [[numbersString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] copy];
+	NSMutableString *numbersString = [NSMutableString string];
+	for (NSString *numberString in _numbers) {
+		[numbersString appendFormat:@"%@ ", numberString];
+	}
+
+	return [[numbersString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] copy];
 }
 
 // 比较。主要用来排序（根据_showNumber）。
 - (NSComparisonResult)compare:(NumberCombinations *)numberCombinations {
-    if (_showNumber < numberCombinations.showNumber) {
-        return (NSComparisonResult) NSOrderedDescending;
-    } else if (_showNumber < numberCombinations.showNumber) {
-        return (NSComparisonResult) NSOrderedAscending;
-    } else {
-        return (NSComparisonResult) NSOrderedSame;
-    }
+	if (_showNumber < numberCombinations.showNumber) {
+		return (NSComparisonResult) NSOrderedDescending;
+	} else if (_showNumber < numberCombinations.showNumber) {
+		return (NSComparisonResult) NSOrderedAscending;
+	} else {
+		return (NSComparisonResult) NSOrderedSame;
+	}
 }
 
+
 #pragma mark - 覆写方法
+
 // 判断2个数字组合是否相等。
 - (BOOL)isEqual:(NumberCombinations *)numberGroup {
-    if (_numbers.count != numberGroup.numbers.count) {
-        return NO;
-    }
-    
-    return [self contains:numberGroup.toString];
+	if (_numbers.count != numberGroup.numbers.count) {
+		return NO;
+	}
+
+	return [self contains:numberGroup.toString];
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@：['%lu']次", [self toString], (unsigned long) _showNumber];
+	return [NSString stringWithFormat:@"%@：['%lu']次", [self toString], (unsigned long) _showNumber];
 }
 
 @end

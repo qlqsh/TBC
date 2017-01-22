@@ -10,7 +10,7 @@
 
 @interface HistorySameViewController : UIViewController
 
-@property(nonatomic, strong) NSArray *historySameWinningList;
-@property(nonatomic) CGFloat heightOfCell;
+@property (nonatomic, strong) NSArray *historySameWinningList;
+@property (nonatomic) CGFloat heightOfCell;
 
 @end

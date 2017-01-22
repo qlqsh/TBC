@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StatisticsCollectionReusableView : UICollectionReusableView
-@property(nonatomic, strong) UILabel *titleLabel; // 标题
+
+@property (nonatomic, strong) UILabel *titleLabel; // 标题
+
 @end

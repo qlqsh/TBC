@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class WinningBallView;
 
 @interface RuleCell3 : UITableViewCell

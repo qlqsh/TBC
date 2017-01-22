@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface TrendStatisticsView : UIView
+
 @property (nonatomic, strong, readonly) UILabel *titleLabel;
 @property (nonatomic, strong, readonly) NSArray *labels;
 @property (nonatomic, strong) NSArray *statisticses;
 @property (nonatomic) NSUInteger state;
+
 @end

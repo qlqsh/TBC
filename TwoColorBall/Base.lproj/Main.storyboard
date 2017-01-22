@@ -28,6 +28,8 @@
                         <segue destination="gxD-6E-Pm6" kind="show" identifier="Statistics" id="GgJ-N7-tgK"/>
                         <segue destination="teW-8x-3dg" kind="show" identifier="WinningList" id="a6d-if-d9i"/>
                         <segue destination="Rsf-re-ATP" kind="show" identifier="Trend" id="rgV-0D-8pM"/>
+                        <segue destination="0vU-Cf-eqO" kind="show" identifier="ConditionTrend" id="Zry-9F-3g8"/>
+                        <segue destination="FPp-Yk-zbc" kind="show" identifier="CalculateMoney" id="ZeA-ic-Yy3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -128,6 +130,61 @@
             </objects>
             <point key="canvasLocation" x="2052" y="994"/>
         </scene>
+        <!--Calculate Money View Controller-->
+        <scene sceneID="rXb-GG-CPr">
+            <objects>
+                <viewController id="ymb-C2-uaa" customClass="CalculateMoneyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8DQ-qR-YaL"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Mt-EX-hMy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v51-6j-XAE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CTY-Bm-kLm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGi-7F-LXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628" y="1771.6641679160421"/>
+        </scene>
+        <!--Condition Trend View Controller-->
+        <scene sceneID="iKh-nM-MP1">
+            <objects>
+                <viewController id="0vU-Cf-eqO" customClass="ConditionTrendViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hcW-LK-LZi"/>
+                        <viewControllerLayoutGuide type="bottom" id="LHN-F2-EuB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xWQ-lC-iqm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSP-9y-nRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2758" y="994"/>
+        </scene>
+        <!--Calculate Money View Controller-->
+        <scene sceneID="1iY-5J-BJ8">
+            <objects>
+                <viewController id="FPp-Yk-zbc" customClass="CalculateMoneyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lZA-Ne-R1p"/>
+                        <viewControllerLayoutGuide type="bottom" id="jIu-Cs-qnq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FYE-j1-EvA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tg-EB-IK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3479" y="994"/>
+        </scene>
         <!--Custom Navigation Controller-->
         <scene sceneID="OD3-rs-AGo">
             <objects>
@@ -145,6 +202,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJ1-3B-Mro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="97" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g75-x8-z8p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Foi-iH-4Ed" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vf8-4a-PoW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ymb-C2-uaa" kind="relationship" relationship="rootViewController" id="bdX-wW-Ctw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxK-lc-kNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688.8" y="1771.6641679160421"/>
         </scene>
     </scenes>
 </document>

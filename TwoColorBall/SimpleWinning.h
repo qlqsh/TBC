@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class NumberCombinations;
 
 @interface SimpleWinning : NSObject
@@ -16,10 +17,8 @@
 @property (nonatomic, readonly, strong) NumberCombinations *blues;    // 蓝球
 @property (nonatomic, copy) NSString *date; // 开奖时间
 
-- (instancetype)initWithTerm:(NSString *)term
-                     andReds:(NSArray *)reds
-                    andBlues:(NSArray *)blues
-                     andDate:(NSString *)date;
+- (instancetype)initWithTerm:(NSString *)term andReds:(NSArray *)reds andBlues:(NSArray *)blues andDate:(NSString *)date;
+
 - (BOOL)contains:(NSString *)numberString;
 
 @end
