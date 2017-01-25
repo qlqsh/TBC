@@ -25,7 +25,8 @@
 
 - (UILabel *)titleLabel {
 	if (!_titleLabel) {
-		_titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, (CGFloat) (kScreenWidth * 0.2), [ResultCell heightOfCell])];
+		_titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, (CGFloat) (kScreenWidth * 0.2),
+				[ResultCell heightOfCell])];
 		_titleLabel.font = [UIFont systemFontOfSize:14.0f];
 		_titleLabel.textColor = [UIColor grayColor];
 		_titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -36,7 +37,8 @@
 
 - (WinningBallView *)winningBallView {
 	if (!_winningBallView) {
-		_winningBallView = [[WinningBallView alloc] initWithFrame:CGRectMake((CGFloat) (kScreenWidth * 0.2), 0.0f, (CGFloat) (kScreenWidth * 0.8), [ResultCell heightOfCell])];
+		_winningBallView = [[WinningBallView alloc] initWithFrame:CGRectMake((CGFloat) (kScreenWidth * 0.2),
+				0.0f, (CGFloat) (kScreenWidth * 0.8), [ResultCell heightOfCell])];
 	}
 
 	return _winningBallView;

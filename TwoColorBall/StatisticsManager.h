@@ -43,6 +43,10 @@
 - (NSArray *)nextWinningDataWithNumberCombinations:(NSArray *)multipleNumberCombinations;
 
 
+#pragma mark - 历史相似走势（基础统计）
+- (NSArray *)conditionTrendBaseStatistics;
+
+
 #pragma mark - 奖金计算
 
 - (NSString *)calculateMoneyWithCurrentWinning:(Winning *)currentWinning andMyNumbers:(NSArray *)myNumbers;

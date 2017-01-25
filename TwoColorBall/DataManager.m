@@ -29,12 +29,7 @@
 
 - (instancetype)init {
 	if (self = [super init]) {
-		if (![self documentExists]) {
-			[self copyFile];
-		}
-		[self getLatestWinningInfoUseNetworking];
-
-		[self repairBadDocument]; // 可能需要修复损坏文档
+        [self updateWinningInfoUseNetworking];
 	}
 
 	return self;
@@ -78,6 +73,14 @@
 
 
 #pragma mark - 网络获取最新数据
+// 更新网络数据
+- (void)updateWinningInfoUseNetworking {
+    if (![self documentExists]) {
+        [self copyFile];
+    }
+    [self getLatestWinningInfoUseNetworking];
+    [self repairBadDocument]; // 可能需要修复损坏文档
+}
 
 - (void)getLatestWinningInfoUseNetworking {
 	Winning *winning = [self readLatestWinningInFile];

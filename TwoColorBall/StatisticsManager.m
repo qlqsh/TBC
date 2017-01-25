@@ -313,8 +313,11 @@
 
 #pragma mark - 历史相似走势
 
-// 包含（多重）指定数字的下一期获奖数据。可以说是从以往的走势图形中寻找与当前走势类似的图形，这个是立体的。
-// 样式：@[ @"06", @"06 08" ]，需要第一个获奖列表包含06，第二个获奖列表包含06 08，然后找出第3个获奖列表。
+/**
+ * 包含（多重）指定数字的下一期获奖数据。可以说是从以往的走势图形中寻找与当前走势类似的图形，这个是立体的。
+ * @param multipleNumberCombinations 条件数组。样式：@[ @"06", @"06 08" ]，需要第一个获奖列表包含06，第二个获奖列表包含06 08，然后找出第3个获奖列表。
+ * @return 符合条件的获奖数据数组。
+ */
 - (NSArray *)nextWinningDataWithNumberCombinations:(NSArray *)multipleNumberCombinations {
 	// 先把所有获奖数据拷贝到一个字典。
 	NSMutableDictionary *allWinningDictionary =
@@ -344,10 +347,9 @@
 															  [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 		}
 
-		resultArray =
-				[self winningDataLocationWithContainNumberCombinations:numberCombinations
-													  andLocationArray:resultArray
-											   andAllWinningDictionary:[allWinningDictionary copy]];
+		resultArray = [self winningDataLocationWithContainNumberCombinations:numberCombinations
+															andLocationArray:resultArray
+													 andAllWinningDictionary:[allWinningDictionary copy]];
 	}
 
 	// 根据符合条件的数组下标获取获奖数组列表。
@@ -391,6 +393,52 @@
 	}
 
 	return [winningDataLocation copy];
+}
+
+#pragma mark - 历史相似走势（基础统计）
+
+- (NSArray *)conditionTrendBaseStatistics {
+	NSDictionary *numbersCombiningDictionary = [self latestWinningNumberCombining];
+	NSArray *allKeys = [numbersCombiningDictionary allKeys];
+	NSArray *sortKeys = [allKeys sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+		if ([obj1 integerValue] > [obj2 integerValue]) {
+			return NSOrderedDescending;
+		}
+		if ([obj1 integerValue] < [obj2 integerValue]) {
+			return NSOrderedAscending;
+		}
+		return NSOrderedSame;
+	}];
+
+	NSMutableArray *statisticsResultArray = [NSMutableArray array];
+	for (NSNumber *key in sortKeys) {
+		NSArray *redsCombining = numbersCombiningDictionary[key];
+		for (NSString *red in redsCombining) {
+			NSArray *conditionRed = [red componentsSeparatedByString:@" "];
+			NSArray *resultArray = [self nextWinningDataWithNumberCombinations:@[conditionRed]];
+			// 除了特殊情况，2组数据也没大用。起码应该3组以上才有参考价值。
+			if (resultArray.count >= 2) {
+				NSArray *statisticsArray = resultArray;
+				if (resultArray.count > 5) {
+					statisticsArray = [resultArray subarrayWithRange:NSMakeRange(resultArray.count-5, 5)];
+				}
+
+				NSDictionary *conditionDictionary = @{red: @(resultArray.count)};
+				NSDictionary *statisticsDictionary = @{@"conditionRed": conditionDictionary, @"statistics":
+						statisticsArray};
+				[statisticsResultArray addObject:statisticsDictionary];
+			}
+		}
+	}
+
+	return [statisticsResultArray copy];
+}
+
+- (NSDictionary *)latestWinningNumberCombining {
+	SimpleWinning *simpleWinning = [_allWinning firstObject];
+	NumberCombinations *numberCombinations = [[NumberCombinations alloc] initWithArray:simpleWinning.reds.numbers];
+
+	return numberCombinations.numbersCombiningDictionary;
 }
 
 

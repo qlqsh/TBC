@@ -49,10 +49,11 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 	[self.view addSubview:self.collectionView];
 
 	// 更新
-	UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithTitle:@"更新"
-																	  style:UIBarButtonItemStylePlain
-																	 target:self
-																	 action:@selector(initializeNetworking)];
+	UIBarButtonItem *refreshButton =
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+														  target:self
+														  action:@selector(initializeNetworking)];
+	refreshButton.tintColor = [UIColor whiteColor];
 	self.navigationItem.rightBarButtonItem = refreshButton;
 }
 
@@ -179,7 +180,8 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 	// 进度指示器
 	[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-		[DataManager sharedManager];
+		DataManager *dataManager = [DataManager sharedManager];
+        [dataManager updateWinningInfoUseNetworking];
 		dispatch_async(dispatch_get_main_queue(), ^{
 			[MBProgressHUD hideHUDForView:self.view animated:YES];
 		});

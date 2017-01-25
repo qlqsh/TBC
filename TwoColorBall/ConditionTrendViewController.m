@@ -8,6 +8,7 @@
 
 #import "ConditionTrendViewController.h"
 #import "BallButtonView.h"
+#import "ConditionTrendBaseStatisticsViewController.h"
 
 #import "StatisticsManager.h"
 #import "SimpleWinning.h"
@@ -54,6 +55,19 @@ static NSString *const kResultCell = @"resultCell";
 	_conditionArray = [NSMutableArray arrayWithCapacity:1];
 	_resultArray = [NSMutableArray arrayWithCapacity:1];
 	[self.view addSubview:self.tableView];
+    
+    // 基础统计
+    UIBarButtonItem *pushButton =
+        [[UIBarButtonItem alloc] initWithTitle:@"基础统计"
+                                         style:UIBarButtonItemStylePlain
+                                        target:self
+                                        action:@selector(pushBaseStatisticsViewController)];
+    self.navigationItem.rightBarButtonItem = pushButton;
+}
+
+- (void)pushBaseStatisticsViewController {
+    ConditionTrendBaseStatisticsViewController *viewController = [[ConditionTrendBaseStatisticsViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 
@@ -76,13 +90,11 @@ static NSString *const kResultCell = @"resultCell";
 	}
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView
-		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.section) {
 		case 0: {
-			ConditionCell *conditionCell =
-					[tableView dequeueReusableCellWithIdentifier:kConditionCell
-													forIndexPath:indexPath];
+			ConditionCell *conditionCell = [tableView dequeueReusableCellWithIdentifier:kConditionCell
+																		   forIndexPath:indexPath];
 			// 删除重影
 			while ([conditionCell.contentView.subviews lastObject] != nil) {
 				[[conditionCell.contentView.subviews lastObject] removeFromSuperview];
@@ -109,7 +121,6 @@ static NSString *const kResultCell = @"resultCell";
 		case 2: {
 			ResultCell *resultCell = [tableView dequeueReusableCellWithIdentifier:kResultCell
 																	 forIndexPath:indexPath];
-			// TODO: 这个就没有重影问题，怪了。
 			SimpleWinning *simpleWinning = self.resultArray[(NSUInteger) indexPath.row];
 			resultCell.titleLabel.text = simpleWinning.term;
 			NSMutableArray *balls = [NSMutableArray arrayWithCapacity:7];
@@ -120,9 +131,8 @@ static NSString *const kResultCell = @"resultCell";
 			return resultCell;
 		}
 		default: { // 用不上
-			UITableViewCell *cell =
-					[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-										   reuseIdentifier:@"default"];
+			UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+														   reuseIdentifier:@"default"];
 			return cell;
 		}
 	}

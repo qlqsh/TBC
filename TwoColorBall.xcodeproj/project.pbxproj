@@ -60,6 +60,7 @@
 		47F5E2521E16E1FC00205009 /* TrendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F5E2511E16E1FC00205009 /* TrendView.m */; };
 		47F628D11E13FA53003DDD1C /* RuleCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F628D01E13FA53003DDD1C /* RuleCell1.m */; };
 		8FEF615BFEBEDC5C8018BDAA /* libPods-TwoColorBall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EAE093A1879DD72773DDCF /* libPods-TwoColorBall.a */; };
+		AF1BA1BBE0082AC78EE3301C /* ConditionTrendBaseStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1BA0B7505B0EDC01E2636B /* ConditionTrendBaseStatisticsViewController.m */; };
 		AF1BAFEE8FA8BD8AB7828725 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF1BAEC206429B54133BA361 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,8 @@
 		47F5E2511E16E1FC00205009 /* TrendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendView.m; sourceTree = "<group>"; };
 		47F628CF1E13FA53003DDD1C /* RuleCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleCell1.h; sourceTree = "<group>"; };
 		47F628D01E13FA53003DDD1C /* RuleCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleCell1.m; sourceTree = "<group>"; };
+		AF1BA0B7505B0EDC01E2636B /* ConditionTrendBaseStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionTrendBaseStatisticsViewController.m; sourceTree = "<group>"; };
+		AF1BA3BC75A497D67D1E715F /* ConditionTrendBaseStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionTrendBaseStatisticsViewController.h; sourceTree = "<group>"; };
 		AF1BAEC206429B54133BA361 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B5DF3476828E97C659D1E8B7 /* Pods-TwoColorBall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoColorBall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoColorBall/Pods-TwoColorBall.debug.xcconfig"; sourceTree = "<group>"; };
 		B5EAE093A1879DD72773DDCF /* libPods-TwoColorBall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwoColorBall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -385,6 +388,8 @@
 			children = (
 				4777A7751E23CCAD009B315A /* ConditionTrendViewController.h */,
 				4777A7761E23CCAD009B315A /* ConditionTrendViewController.m */,
+				AF1BA3BC75A497D67D1E715F /* ConditionTrendBaseStatisticsViewController.h */,
+				AF1BA0B7505B0EDC01E2636B /* ConditionTrendBaseStatisticsViewController.m */,
 			);
 			name = ConditionTrend;
 			sourceTree = "<group>";
@@ -700,6 +705,7 @@
 				47B86A071E22A5540031DC3C /* TrendViewController.m in Sources */,
 				4742E96B1E0D56DA008C4115 /* CommonMethod.m in Sources */,
 				4742E9711E0D6F7D008C4115 /* AFTCBClient.m in Sources */,
+				AF1BA1BBE0082AC78EE3301C /* ConditionTrendBaseStatisticsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

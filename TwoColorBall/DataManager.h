@@ -16,8 +16,9 @@
 + (DataManager *)sharedManager;
 
 
-#pragma mark - 开发方法
+#pragma mark - 开放方法
 
+- (void)updateWinningInfoUseNetworking;          // 更新网络数据
 - (Winning *)readLatestWinningInFile;            // 本地文档最新获奖数据
 - (NSArray *)readAllWinningListInFile;           // 本地文档所有获奖数据，主要方法，其它方法都要调用它。
 - (NSArray *)readAllWinningListInFileUseReverse; // 本地文档所有获奖数据（逆序列表，走势图用）
