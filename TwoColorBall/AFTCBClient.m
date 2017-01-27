@@ -16,6 +16,11 @@ static NSString *const AFCHHBaseURLString = @"http://kaijiang.zhcw.com/lishishuj
 	static AFTCBClient *_sharedClient = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
+        // 设置超时时间
+        [_sharedClient.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+        _sharedClient.requestSerializer.timeoutInterval = 15.f;
+        [_sharedClient.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+        
 		_sharedClient = [[AFTCBClient alloc] initWithBaseURL:[NSURL URLWithString:AFCHHBaseURLString]];
 		_sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
 		_sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
