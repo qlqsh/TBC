@@ -16,11 +16,6 @@
 @property (nonatomic, readonly) NSArray *allWinningRedsBallArray;    // 所有获奖红球（6个红球也是一数组）的数组
 
 
-#pragma mark - 单例
-
-+ (TrendData *)sharedData;
-
-
 #pragma mark - 开放方法
 
 //- (NSArray *)ballArrayWithCustomNumber:(NSUInteger)number;

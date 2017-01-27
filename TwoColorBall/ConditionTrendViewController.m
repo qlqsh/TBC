@@ -55,19 +55,19 @@ static NSString *const kResultCell = @"resultCell";
 	_conditionArray = [NSMutableArray arrayWithCapacity:1];
 	_resultArray = [NSMutableArray arrayWithCapacity:1];
 	[self.view addSubview:self.tableView];
-    
-    // 基础统计
-    UIBarButtonItem *pushButton =
-        [[UIBarButtonItem alloc] initWithTitle:@"基础统计"
-                                         style:UIBarButtonItemStylePlain
-                                        target:self
-                                        action:@selector(pushBaseStatisticsViewController)];
-    self.navigationItem.rightBarButtonItem = pushButton;
+
+	// 基础统计
+	UIBarButtonItem *pushButton =
+			[[UIBarButtonItem alloc] initWithTitle:@"基础统计"
+											 style:UIBarButtonItemStylePlain
+											target:self
+											action:@selector(pushBaseStatisticsViewController)];
+	self.navigationItem.rightBarButtonItem = pushButton;
 }
 
 - (void)pushBaseStatisticsViewController {
-    ConditionTrendBaseStatisticsViewController *viewController = [[ConditionTrendBaseStatisticsViewController alloc] init];
-    [self.navigationController pushViewController:viewController animated:YES];
+	ConditionTrendBaseStatisticsViewController *viewController = [[ConditionTrendBaseStatisticsViewController alloc] init];
+	[self.navigationController pushViewController:viewController animated:YES];
 }
 
 
@@ -141,8 +141,7 @@ static NSString *const kResultCell = @"resultCell";
 
 #pragma mark - UITableViewDelegate
 
-- (CGFloat)   tableView:(UITableView *)tableView
-heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.section) {
 		case 0:
 			return [ConditionCell heightOfCell];
@@ -167,7 +166,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)calculateAction {
 	[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-		StatisticsManager *statisticsManager = [StatisticsManager sharedData];
+		StatisticsManager *statisticsManager = [[StatisticsManager alloc] init];
 		self.resultArray =
 				[[statisticsManager nextWinningDataWithNumberCombinations:self.conditionArray] mutableCopy];
 		dispatch_async(dispatch_get_main_queue(), ^{
@@ -226,7 +225,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 									 style:UIAlertActionStyleDefault
 								   handler:^(UIAlertAction *action) {
 									   if (_conditionArray.count > 5) {
-										   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+										   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view
+																					 animated:YES];
 										   hud.mode = MBProgressHUDModeText;
 										   hud.label.text = @"您的条件太多了！";
 										   [hud hideAnimated:YES afterDelay:2.0f];
@@ -240,7 +240,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
 										   // 1、最多只能选择6个红球。
 										   if (selectedBallArray.count > 6) {
-											   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+											   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view
+																						 animated:YES];
 											   hud.mode = MBProgressHUDModeText;
 											   hud.label.text = @"最多只能选择6个红球";
 											   [hud hideAnimated:YES afterDelay:2.0f];
@@ -252,10 +253,11 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 												   [_conditionArray addObject:selectedBallArray];
 											   }
 											   // 延时机制。消除警告
-											   dispatch_after((dispatch_time_t) 0.2, dispatch_get_main_queue(), ^{
-												   // 刷新表格
-												   [self.tableView reloadData];
-											   });
+											   dispatch_after((dispatch_time_t) 0.2,
+													   dispatch_get_main_queue(), ^{
+														   // 刷新表格
+														   [self.tableView reloadData];
+													   });
 										   }
 									   }
 								   }];

@@ -46,7 +46,7 @@ static NSString *const kWinningMoneyCell = @"winningMoneyCell";
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
-	DataManager *dataManager = [DataManager sharedManager];
+	DataManager *dataManager = [[DataManager alloc] init];
 
 	_recentlyWinnings = [[dataManager readAllWinningListInFile] subarrayWithRange:NSMakeRange(0, 10)];
 	_winning = [dataManager readLatestWinningInFile];
@@ -244,7 +244,7 @@ static NSString *const kWinningMoneyCell = @"winningMoneyCell";
 - (void)calculateAction {
 	[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-		StatisticsManager *statisticsManager = [StatisticsManager sharedData];
+		StatisticsManager *statisticsManager = [[StatisticsManager alloc] init];
 		_winningMoneyDescription = [statisticsManager calculateMoneyWithCurrentWinning:_winning
 																		  andMyNumbers:_myNumbersArray];
 		dispatch_async(dispatch_get_main_queue(), ^{

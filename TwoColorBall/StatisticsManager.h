@@ -14,12 +14,6 @@
 
 @property (nonatomic, strong) NSArray *allWinning;
 
-
-#pragma mark - 单例
-
-+ (StatisticsManager *)sharedData;
-
-
 #pragma mark - 统计（红、蓝、头、尾、和值范围、连号概率、红3区、蓝余3）
 
 - (NSArray *)redCountInWinningCount:(NSUInteger)count;    // 红球出现情况

@@ -50,7 +50,7 @@
 	// 进度指示器
 	[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-		TrendData *trendData = [TrendData sharedData];
+		TrendData *trendData = [[TrendData alloc] init];
 		_winningList = [trendData termAndBallsWithCustomNumber:100];
 		_statisticsArray = [trendData statisticsArrayWithNumber:0];
 		dispatch_async(dispatch_get_main_queue(), ^{

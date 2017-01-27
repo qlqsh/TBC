@@ -15,27 +15,6 @@
 
 @implementation DataManager
 
-// 单例模式初始化
-+ (DataManager *)sharedManager {
-	static DataManager *sharedDataManagerInstance = nil;
-
-	static dispatch_once_t predicate;
-	dispatch_once(&predicate, ^{
-		sharedDataManagerInstance = [[self alloc] init];
-	});
-
-	return sharedDataManagerInstance;
-}
-
-- (instancetype)init {
-	if (self = [super init]) {
-        [self updateWinningInfoUseNetworking];
-	}
-
-	return self;
-}
-
-
 #pragma mark - 从本地文档获取数据
 
 /**

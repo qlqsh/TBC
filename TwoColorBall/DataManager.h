@@ -13,9 +13,6 @@
 // 双色球获奖信息数据管理。数据从网络获取，存储在本地文档。位置：/Library/Caches/tbc_winnings.plist
 @interface DataManager : NSObject
 
-+ (DataManager *)sharedManager;
-
-
 #pragma mark - 开放方法
 
 - (void)updateWinningInfoUseNetworking;          // 更新网络数据

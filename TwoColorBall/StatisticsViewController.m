@@ -31,7 +31,7 @@ static NSString *const kCollectionElementKindSectionHeaderIdentifier = @"statist
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
-	StatisticsManager *statisticsManager = [StatisticsManager sharedData];
+	StatisticsManager *statisticsManager = [[StatisticsManager alloc] init];
 	NSMutableDictionary *dataDict = [NSMutableDictionary dictionaryWithCapacity:8];
 
 	dataDict[@"red"] = [statisticsManager redCountInWinningCount:0];

@@ -57,7 +57,7 @@
 - (void)updateTableView {
 	[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-		StatisticsManager *statisticsManager = [StatisticsManager sharedData];
+		StatisticsManager *statisticsManager = [[StatisticsManager alloc] init];
 		_historySameWinningList = [[[statisticsManager historySame] reverseObjectEnumerator] allObjects];
 		dispatch_async(dispatch_get_main_queue(), ^{
 			[self.tableView reloadData];

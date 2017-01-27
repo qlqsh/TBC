@@ -17,20 +17,9 @@
 
 #pragma mark - 初始化
 
-+ (TrendData *)sharedData {
-	static TrendData *sharedTrendDataInstance = nil;
-
-	static dispatch_once_t predicate;
-	dispatch_once(&predicate, ^{
-		sharedTrendDataInstance = [[self alloc] init];
-	});
-
-	return sharedTrendDataInstance;
-}
-
 - (instancetype)init {
 	if (self = [super init]) {
-		DataManager *dataManager = [DataManager sharedManager];
+		DataManager *dataManager = [[DataManager alloc] init];
 		NSArray *allWinning = [dataManager readAllWinningListInFileUseReverse];
 		NSUInteger count = allWinning.count;
 		NSMutableArray *allWinningBallArray = [NSMutableArray arrayWithCapacity:count];

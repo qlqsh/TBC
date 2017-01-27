@@ -180,7 +180,7 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 	// 进度指示器
 	[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-		DataManager *dataManager = [DataManager sharedManager];
+		DataManager *dataManager = [[DataManager alloc] init];
         [dataManager updateWinningInfoUseNetworking];
 		dispatch_async(dispatch_get_main_queue(), ^{
 			[MBProgressHUD hideHUDForView:self.view animated:YES];

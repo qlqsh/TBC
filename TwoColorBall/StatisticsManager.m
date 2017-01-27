@@ -16,22 +16,9 @@
 
 @implementation StatisticsManager
 
-#pragma mark - 单例
-
-+ (StatisticsManager *)sharedData {
-	static StatisticsManager *sharedStatisticsManagerInstance = nil;
-
-	static dispatch_once_t predicate;
-	dispatch_once(&predicate, ^{
-		sharedStatisticsManagerInstance = [[self alloc] init];
-	});
-
-	return sharedStatisticsManagerInstance;
-}
-
 - (instancetype)init {
 	if (self = [super init]) {
-		DataManager *dataManager = [DataManager sharedManager];
+		DataManager *dataManager = [[DataManager alloc] init];
 		NSArray *allWinning = [dataManager readAllWinningListInFile];
 
 		NSMutableArray *allWinningData = [NSMutableArray arrayWithCapacity:allWinning.count];

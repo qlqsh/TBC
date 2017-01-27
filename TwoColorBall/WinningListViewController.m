@@ -27,7 +27,7 @@ static NSString *const kWinningCell = @"winningCell";
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
-	DataManager *dataManager = [DataManager sharedManager];
+	DataManager *dataManager = [[DataManager alloc] init];
 	_winningList = [dataManager readAllWinningListInFile];
 
 	_heightOfCell = [WinningCell heightOfCellWithWidth:self.view.bounds.size.width];
