@@ -169,7 +169,7 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 	} else if ([self.connection currentReachabilityStatus] == ReachableViaWWAN) { // 3G
 		[self updateDataUseNetworking];
 	} else { // NotReachable
-		NSLog(@"没有网络");
+		DLog(@"没有网络");
 	}
 }
 

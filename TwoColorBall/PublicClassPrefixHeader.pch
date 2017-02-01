@@ -31,3 +31,10 @@
 // 走势图常用设置
 #define kTitleWidth 65.0f
 #define kLabelWidth 25.0f
+
+// 替代NSLog，可以输出类名、方法名、行号。
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLog(...)
+#endif

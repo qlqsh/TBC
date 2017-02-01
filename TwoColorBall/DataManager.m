@@ -65,16 +65,35 @@
 	Winning *winning = [self readLatestWinningInFile];
 	NSUInteger nextYear = [self calculateYear];
 
-	NSDictionary *parameters = @{@"beginIssue": winning.term,
-			@"endIssue": [NSString stringWithFormat:@"%lu001", (unsigned long) nextYear]
-	};
-	[WinningList getWinningListContentUseURLString:@"ssqInfoList.jsp?czId=1"
-									 andParameters:parameters
-										 withBlock:^(NSArray *winnings, NSError *error) {
-											 if (!error) {
-												 [self writeWinningInfoToFile:[winnings copy]];
-											 }
-										 }];
+	NSString *basePath = @"http://kaijiang.zhcw.com/lishishuju/jsp/ssqInfoList.jsp?czId=1";
+	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+	// 申明请求的数据是http类型
+	sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+	// 申明返回的结果是http类型
+	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+	// 增加支持html
+	sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",
+																	  @"text/plain", nil];
+	// 设置超时时间
+	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+	sessionManager.requestSerializer.timeoutInterval = 15.f;
+	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+
+	NSString *customPath = [NSString stringWithFormat:@"&beginIssue=%@&endIssue=%d001", winning.term, nextYear];
+	NSString *urlPath = [NSString stringWithFormat:@"%@%@", basePath, customPath];
+	[sessionManager GET:urlPath
+			 parameters:nil
+			   progress:nil
+				success:^(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject) {
+					NSString *htmlContent = [[NSString alloc] initWithData:responseObject
+																  encoding:NSUTF8StringEncoding
+					];
+					WinningList *winningList = [[WinningList alloc] initWithHtmlContent:htmlContent];
+					[self writeWinningInfoToFile:winningList.list];
+				}
+				failure:^(NSURLSessionDataTask *_Nullable task, NSError *_Nonnull error) {
+					DLog(@"内容获取失败：%@", error);
+				}];
 }
 
 /**
@@ -107,7 +126,7 @@
 						[self writeWinningInfoToFile:winningList.list];
 					}
 					failure:^(NSURLSessionDataTask *_Nullable task, NSError *_Nonnull error) {
-						NSLog(@"内容获取失败：%@", error);
+						DLog(@"内容获取失败：%@", error);
 					}];
 	}
 }
@@ -144,7 +163,7 @@
 	[archiver finishEncoding];
 	BOOL success = [saveData writeToFile:savePath atomically:YES];
 	if (!success) {
-		NSLog(@"存档失败, %@", savePath);
+		DLog(@"存档失败, %@", savePath);
 		return FALSE;
 	}
 
@@ -178,10 +197,10 @@
 		NSString *dataPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/winnings.plist"];
 		NSError *error;
 		if ([fileManager copyItemAtPath:dataPath toPath:loadPath error:&error]) {
-			NSLog(@"拷贝文件成功");
+			DLog(@"拷贝文件成功");
 			return YES;
 		} else {
-			NSLog(@"%@", error);
+			DLog(@"%@", error);
 			return NO;
 		}
 	}
@@ -196,9 +215,9 @@
 	if ([fileManager fileExistsAtPath:kWinningInfoLocalDocumentPath]) {
 		NSError *error;
 		if ([fileManager removeItemAtPath:kWinningInfoLocalDocumentPath error:&error]) {
-			NSLog(@"文件删除成功");
+			DLog(@"文件删除成功");
 		} else {
-			NSLog(@"%@", error);
+			DLog(@"%@", error);
 		}
 	}
 }
@@ -229,7 +248,7 @@
 	}
 
 	if (isBadDocument) {
-		NSLog(@"文档损坏，修复");
+		DLog(@"文档损坏，修复");
 		[self removeFile];
 		[self copyFile];
 		[self getLatestWinningInfoUseNetworking];

@@ -23,10 +23,4 @@
 - (instancetype)initWithWinningList:(NSArray *)list;
 
 
-#pragma mark - 网络获取获奖信息html网页
-
-+ (NSURLSessionDataTask *)getWinningListContentUseURLString:(NSString *)urlString
-											  andParameters:(NSDictionary *)parameters
-												  withBlock:(void (^)(NSArray *winnings, NSError *error))block;
-
 @end

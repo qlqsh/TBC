@@ -9,9 +9,6 @@
 #import "WinningList.h"
 #import "Winning.h"
 #import "TFHppleElements.h"
-#import "AFTCBClient.h"
-
-#import <MBProgressHUD/MBProgressHUD.h>
 
 @implementation WinningList
 
@@ -61,39 +58,6 @@
 	}
 
 	return self;
-}
-
-
-#pragma mark - 网络获取获奖信息html网页
-
-/**
- *  获取最新信息列表。
- *
- *  @param urlString  地址
- *  @param parameters 参数
- *  @param block      数据处理块
- *
- *  @return 会话
- */
-+ (NSURLSessionDataTask *)getWinningListContentUseURLString:(NSString *)urlString
-											  andParameters:(NSDictionary *)parameters
-												  withBlock:(void (^)(NSArray *winnings, NSError *error))block {
-	return [[AFTCBClient sharedClient] GET:urlString
-								parameters:parameters
-								  progress:nil
-								   success:^(NSURLSessionDataTask *task, id responseObject) {
-									   NSString *htmlContent = [[NSString alloc] initWithData:responseObject
-																					 encoding:NSUTF8StringEncoding];
-									   WinningList *winningList = [[WinningList alloc] initWithHtmlContent:htmlContent];
-									   if (block) {
-										   block([NSArray arrayWithArray:winningList.list], nil);
-									   }
-								   }
-								   failure:^(NSURLSessionDataTask *task, NSError *error) {
-									   if (block) {
-										   block([NSArray array], error);
-									   }
-								   }];
 }
 
 

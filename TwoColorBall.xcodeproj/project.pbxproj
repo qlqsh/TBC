@@ -28,7 +28,6 @@
 		473BE7021E1769F200A09915 /* BallButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 473BE7011E1769F200A09915 /* BallButtonView.m */; };
 		4742E96B1E0D56DA008C4115 /* CommonMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4742E96A1E0D56DA008C4115 /* CommonMethod.m */; };
 		4742E96E1E0D6978008C4115 /* WinningList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4742E96D1E0D6978008C4115 /* WinningList.m */; };
-		4742E9711E0D6F7D008C4115 /* AFTCBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4742E9701E0D6F7D008C4115 /* AFTCBClient.m */; };
 		475A39F51E13926C00DC48AC /* WinningDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475A39F41E13926C00DC48AC /* WinningDetailViewController.m */; };
 		476E4C951E290F8E00A05526 /* ConditionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 476E4C941E290F8E00A05526 /* ConditionCell.m */; };
 		4777A7771E23CCAD009B315A /* ConditionTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4777A7761E23CCAD009B315A /* ConditionTrendViewController.m */; };
@@ -107,8 +106,6 @@
 		4742E96A1E0D56DA008C4115 /* CommonMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonMethod.m; sourceTree = "<group>"; };
 		4742E96C1E0D6978008C4115 /* WinningList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningList.h; sourceTree = "<group>"; };
 		4742E96D1E0D6978008C4115 /* WinningList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningList.m; sourceTree = "<group>"; };
-		4742E96F1E0D6F7D008C4115 /* AFTCBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTCBClient.h; sourceTree = "<group>"; };
-		4742E9701E0D6F7D008C4115 /* AFTCBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTCBClient.m; sourceTree = "<group>"; };
 		475A39F31E13926C00DC48AC /* WinningDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningDetailViewController.h; sourceTree = "<group>"; };
 		475A39F41E13926C00DC48AC /* WinningDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningDetailViewController.m; sourceTree = "<group>"; };
 		476E4C931E290F8E00A05526 /* ConditionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionCell.h; sourceTree = "<group>"; };
@@ -234,8 +231,6 @@
 		471DB72D1E0BF0620065D426 /* Networking Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4742E96F1E0D6F7D008C4115 /* AFTCBClient.h */,
-				4742E9701E0D6F7D008C4115 /* AFTCBClient.m */,
 				471DB72E1E0BF0930065D426 /* Reachability.h */,
 				471DB72F1E0BF0930065D426 /* Reachability.m */,
 			);
@@ -704,7 +699,6 @@
 				47D9587D1E16142600A1D318 /* TrendBaseView.m in Sources */,
 				47B86A071E22A5540031DC3C /* TrendViewController.m in Sources */,
 				4742E96B1E0D56DA008C4115 /* CommonMethod.m in Sources */,
-				4742E9711E0D6F7D008C4115 /* AFTCBClient.m in Sources */,
 				AF1BA1BBE0082AC78EE3301C /* ConditionTrendBaseStatisticsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,6 +825,22 @@
 				GCC_PREFIX_HEADER = "/Users/liuming/Documents/liuming/2017工程/TwoColorBall/TwoColorBall/PublicClassPrefixHeader.pch";
 				INFOPLIST_FILE = TwoColorBall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/PNChart\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/UICountingLabel\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/hpple\"",
+					"-DDEBUG",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lm.TwoColorBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
