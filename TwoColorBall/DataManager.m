@@ -79,7 +79,7 @@
 	sessionManager.requestSerializer.timeoutInterval = 15.f;
 	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
 
-	NSString *customPath = [NSString stringWithFormat:@"&beginIssue=%@&endIssue=%d001", winning.term, nextYear];
+	NSString *customPath = [NSString stringWithFormat:@"&beginIssue=%@&endIssue=%lu001", winning.term, (unsigned long)nextYear];
 	NSString *urlPath = [NSString stringWithFormat:@"%@%@", basePath, customPath];
 	[sessionManager GET:urlPath
 			 parameters:nil

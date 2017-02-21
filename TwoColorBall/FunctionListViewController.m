@@ -21,7 +21,9 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 @property (nonatomic, strong) UICollectionView *collectionView; // 集合视图
 @property (nonatomic, strong) UICollectionViewFlowLayout *collectionViewFlowLayout; // 流式布局
 
+// 网络标识
 @property (nonatomic, strong) Reachability *connection;
+@property (nonatomic, strong) MBProgressHUD *hud;
 @end
 
 @implementation FunctionListViewController
@@ -55,6 +57,8 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 														  action:@selector(initializeNetworking)];
 	refreshButton.tintColor = [UIColor whiteColor];
 	self.navigationItem.rightBarButtonItem = refreshButton;
+
+	[self.view addSubview:self.hud];
 }
 
 
@@ -160,6 +164,14 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 	return _collectionViewFlowLayout;
 }
 
+- (MBProgressHUD *)hud {
+	if (!_hud) {
+		_hud = [[MBProgressHUD alloc] initWithView:self.view];
+	}
+
+	return _hud;
+}
+
 
 #pragma mark - 网络状况监测
 
@@ -169,6 +181,11 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 	} else if ([self.connection currentReachabilityStatus] == ReachableViaWWAN) { // 3G
 		[self updateDataUseNetworking];
 	} else { // NotReachable
+		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+		hud.mode = MBProgressHUDModeText;
+		hud.label.text = @"网络无法访问";
+		[hud hideAnimated:YES afterDelay:2.0f];
+		[hud removeFromSuperViewOnHide];
 		DLog(@"没有网络");
 	}
 }
@@ -178,14 +195,15 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 
 - (void)updateDataUseNetworking {
 	// 进度指示器
-	[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+	[self.hud showAnimated:YES];
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
 		DataManager *dataManager = [[DataManager alloc] init];
         [dataManager updateWinningInfoUseNetworking];
 		dispatch_async(dispatch_get_main_queue(), ^{
-			[MBProgressHUD hideHUDForView:self.view animated:YES];
+			[self.hud hideAnimated:YES];
 		});
 	});
+    [self.hud hideAnimated:YES afterDelay:15.0f];
 }
 
 @end

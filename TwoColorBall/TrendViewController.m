@@ -153,12 +153,12 @@
 									   saveTrendSettingDict[@"selectedBall"] = @(selectedBall.selectedSegmentIndex);
 									   [self setSettingDict:[saveTrendSettingDict copy]];
 
-									   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-									   // 清除所有视图
-									   [self removeView];
-
+                                       [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                                       
 									   // 延时机制。消除警告
 									   dispatch_after((dispatch_time_t) 0.2, dispatch_get_main_queue(), ^{
+                                           // 清除所有视图
+                                           [self removeView];
 										   // 进度指示器
 										   [MBProgressHUD hideHUDForView:self.view animated:YES];
 										   [self.view addSubview:self.scrollView];
