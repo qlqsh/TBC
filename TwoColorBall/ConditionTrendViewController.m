@@ -28,6 +28,7 @@ static NSString *const kResultCell = @"resultCell";
 
 @property (nonatomic, strong) NSMutableArray *conditionArray;   // 条件数组
 @property (nonatomic, strong) NSMutableArray *resultArray;      // 结果数组
+@property (nonatomic, strong) NSArray *recentTwoTermWinnings; 	// 最近2期获奖数据
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -51,9 +52,12 @@ static NSString *const kResultCell = @"resultCell";
 #pragma mark - 界面设置
 
 - (void)initializeUserInface {
-	self.title = @"条件走势";
+	self.title = @"相似走势";
 	_conditionArray = [NSMutableArray arrayWithCapacity:1];
 	_resultArray = [NSMutableArray arrayWithCapacity:1];
+	StatisticsManager *statisticsManager = [[StatisticsManager alloc] init];
+	NSArray *allWinning = statisticsManager.allWinning;
+	_recentTwoTermWinnings = [allWinning subarrayWithRange:NSMakeRange(0, 2)];
 	[self.view addSubview:self.tableView];
 
 	// 基础统计
@@ -74,16 +78,18 @@ static NSString *const kResultCell = @"resultCell";
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 3;
+	return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	switch (section) {
-		case 0: // 条件行
+		case 0: // 最近获奖2行
+			return _recentTwoTermWinnings.count;
+		case 1: // 条件行
 			return _conditionArray.count;
-		case 1: // 按钮行
+		case 2: // 按钮行
 			return 1;
-		case 2: // 结果行
+		case 3: // 结果行
 			return _resultArray.count;
 		default:
 			return 0;
@@ -93,6 +99,18 @@ static NSString *const kResultCell = @"resultCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.section) {
 		case 0: {
+			ResultCell *resultCell = [tableView dequeueReusableCellWithIdentifier:kResultCell
+																	 forIndexPath:indexPath];
+			SimpleWinning *simpleWinning = self.recentTwoTermWinnings[(NSUInteger) indexPath.row];
+			resultCell.titleLabel.text = simpleWinning.term;
+			NSMutableArray *balls = [NSMutableArray arrayWithCapacity:7];
+			[balls addObjectsFromArray:simpleWinning.reds.numbers];
+			[balls addObjectsFromArray:simpleWinning.blues.numbers];
+			resultCell.winningBallView.balls = [balls copy];
+
+			return resultCell;
+		}
+		case 1: {
 			ConditionCell *conditionCell = [tableView dequeueReusableCellWithIdentifier:kConditionCell
 																		   forIndexPath:indexPath];
 			// 删除重影
@@ -103,7 +121,7 @@ static NSString *const kResultCell = @"resultCell";
 
 			return conditionCell;
 		}
-		case 1: {
+		case 2: {
 			ButtonCell *buttonCell = [tableView dequeueReusableCellWithIdentifier:kButtonCell
 																	 forIndexPath:indexPath];
 			[buttonCell.addButton addTarget:self
@@ -118,7 +136,7 @@ static NSString *const kResultCell = @"resultCell";
 
 			return buttonCell;
 		}
-		case 2: {
+		case 3: {
 			ResultCell *resultCell = [tableView dequeueReusableCellWithIdentifier:kResultCell
 																	 forIndexPath:indexPath];
 			SimpleWinning *simpleWinning = self.resultArray[(NSUInteger) indexPath.row];
@@ -144,10 +162,12 @@ static NSString *const kResultCell = @"resultCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.section) {
 		case 0:
-			return [ConditionCell heightOfCell];
+			return [ResultCell heightOfCell];
 		case 1:
-			return [ButtonCell heightOfCell];
+			return [ConditionCell heightOfCell];
 		case 2:
+			return [ButtonCell heightOfCell];
+		case 3:
 			return [ResultCell heightOfCell];
 		default:
 			return 0;
