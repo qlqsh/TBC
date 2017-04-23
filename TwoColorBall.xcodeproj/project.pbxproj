@@ -12,7 +12,6 @@
 		470CABE61E118A7100F4A206 /* SimpleWinning.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABE51E118A7100F4A206 /* SimpleWinning.m */; };
 		470CABE91E118B6300F4A206 /* StatisticsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABE81E118B6300F4A206 /* StatisticsManager.m */; };
 		470CABEC1E118D2500F4A206 /* HistorySameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470CABEB1E118D2500F4A206 /* HistorySameViewController.m */; };
-		4710F6EC1E1F6460004C3128 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4710F6EB1E1F6460004C3128 /* README.md */; };
 		471296021E13CA1400402038 /* WinningRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471296011E13CA1400402038 /* WinningRuleViewController.m */; };
 		4712C0311E0E568800271B08 /* winnings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4712C0301E0E568800271B08 /* winnings.plist */; };
 		471D3B8A1E0E970800ED730F /* WinningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471D3B891E0E970800ED730F /* WinningListViewController.m */; };
@@ -108,6 +107,8 @@
 		4742E96D1E0D6978008C4115 /* WinningList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningList.m; sourceTree = "<group>"; };
 		475A39F31E13926C00DC48AC /* WinningDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningDetailViewController.h; sourceTree = "<group>"; };
 		475A39F41E13926C00DC48AC /* WinningDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningDetailViewController.m; sourceTree = "<group>"; };
+		475C82631E63BFBD00CCEFD4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		475C82681E63BFDA00CCEFD4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		476E4C931E290F8E00A05526 /* ConditionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionCell.h; sourceTree = "<group>"; };
 		476E4C941E290F8E00A05526 /* ConditionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionCell.m; sourceTree = "<group>"; };
 		4777A7751E23CCAD009B315A /* ConditionTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionTrendViewController.h; sourceTree = "<group>"; };
@@ -122,9 +123,7 @@
 		478FFC1D1E0B067F004F5960 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		478FFC1F1E0B067F004F5960 /* FunctionListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionListViewController.h; sourceTree = "<group>"; };
 		478FFC201E0B067F004F5960 /* FunctionListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionListViewController.m; sourceTree = "<group>"; };
-		478FFC231E0B067F004F5960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		478FFC251E0B067F004F5960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		478FFC281E0B067F004F5960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		478FFC2A1E0B067F004F5960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47941A5C1E13AB85006DE196 /* MoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyCell.h; sourceTree = "<group>"; };
 		47941A5D1E13AB85006DE196 /* MoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyCell.m; sourceTree = "<group>"; };
@@ -573,6 +572,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 478FFC0D1E0B067E004F5960;
 			productRefGroup = 478FFC171E0B067F004F5960 /* Products */;
@@ -676,7 +676,6 @@
 				47E744EA1E1105EB0017E90D /* BallView.m in Sources */,
 				47F5E24F1E16E14D00205009 /* TrendTitleView.m in Sources */,
 				47E68F191E2C928800ABDECC /* CalculateMoneyViewController.m in Sources */,
-				4710F6EC1E1F6460004C3128 /* README.md in Sources */,
 				47F203E11E2CECE100C14ED9 /* CMButtonCell.m in Sources */,
 				471296021E13CA1400402038 /* WinningRuleViewController.m in Sources */,
 				470CABE91E118B6300F4A206 /* StatisticsManager.m in Sources */,
@@ -709,7 +708,7 @@
 		478FFC221E0B067F004F5960 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				478FFC231E0B067F004F5960 /* Base */,
+				475C82631E63BFBD00CCEFD4 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -717,7 +716,7 @@
 		478FFC271E0B067F004F5960 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				478FFC281E0B067F004F5960 /* Base */,
+				475C82681E63BFDA00CCEFD4 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -729,6 +728,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -768,6 +768,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DDEBUG";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -777,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
