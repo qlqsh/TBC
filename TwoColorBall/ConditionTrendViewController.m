@@ -57,7 +57,7 @@ static NSString *const kResultCell = @"resultCell";
 	_resultArray = [NSMutableArray arrayWithCapacity:1];
 	StatisticsManager *statisticsManager = [[StatisticsManager alloc] init];
 	NSArray *allWinning = statisticsManager.allWinning;
-	_recentTwoTermWinnings = [allWinning subarrayWithRange:NSMakeRange(0, 2)];
+	_recentTwoTermWinnings = [[[allWinning subarrayWithRange:NSMakeRange(0, 2)] reverseObjectEnumerator] allObjects];
 	[self.view addSubview:self.tableView];
 
 	// 基础统计
@@ -190,6 +190,8 @@ static NSString *const kResultCell = @"resultCell";
 		self.resultArray =
 				[[statisticsManager nextWinningDataWithNumberCombinations:self.conditionArray] mutableCopy];
 		dispatch_async(dispatch_get_main_queue(), ^{
+            // TODO: 这里应该再有个判断。就是条件为空（没有条件），啥也不做
+            
 			if (self.resultArray.count == 0) {
 				[MBProgressHUD hideHUDForView:self.view animated:YES];
 				MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
