@@ -25,7 +25,6 @@
 
 
 #pragma mark - 获取指定个数的数字组合
-
 - (NSArray *)combining:(NSUInteger)number {
 	if (number == 1) {
 		return _balls;

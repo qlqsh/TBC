@@ -44,7 +44,6 @@ static NSString *const kCollectionViewCellIdentifier = @"functionCell";
 
 
 #pragma mark - 初始化界面
-
 - (void)initializeUserInterface {
 	self.title = @"功能列表";
 	// 视图加载

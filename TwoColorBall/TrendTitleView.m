@@ -16,7 +16,7 @@
 		[self addSubview:numIssue];
 
 		for (NSUInteger i = 1; i <= 33; i++) {
-			UILabel *redLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTitleWidth + kLabelWidth * (i - 1),
+			UILabel *redLabel = [[ UILabel alloc] initWithFrame:CGRectMake(kTitleWidth + kLabelWidth * (i - 1),
 					0.0f,
 					kLabelWidth,
 					kLabelWidth)];

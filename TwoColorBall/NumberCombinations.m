@@ -15,7 +15,6 @@
  */
 @implementation NumberCombinations
 
-
 #pragma mark - 初始化
 
 - (instancetype)initWithString:(NSString *)numberString {
